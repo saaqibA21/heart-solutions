@@ -1,0 +1,2076 @@
+{
+  "version": "3.0.0",
+  "metadata": {
+    "title": "CardioSuite Clinical Drug & Collision Knowledge Base",
+    "rxnorm_version": "2026-09",
+    "credibleMeds_version": "2026-09",
+    "sources": [
+      "NLM RxNorm",
+      "CredibleMeds",
+      "FDA DailyMed",
+      "AHA/ACC 2024 Guidelines"
+    ],
+    "categories": [
+      "Antiarrhythmics",
+      "Anticoagulants",
+      "Antiplatelets",
+      "Heart Failure & RAAS Blockers",
+      "Beta Blockers",
+      "Calcium Channel Blockers",
+      "Diuretics & MRAs",
+      "Inotropes & Cardiac Glycosides",
+      "Colliding Antibiotics & Macrolides",
+      "Colliding NSAIDs",
+      "Colliding Psychotropics & SSRIs",
+      "Colliding Antifungals & Azoles"
+    ]
+  },
+  "drugs": [
+    {
+      "id": "amiodarone",
+      "name": "Amiodarone",
+      "brand_names": [
+        "Cordarone",
+        "Pacerone",
+        "Nexterone"
+      ],
+      "class": "Class III Antiarrhythmic",
+      "category": "Antiarrhythmics",
+      "common_dosages": [
+        "100 mg",
+        "200 mg",
+        "400 mg daily"
+      ],
+      "indications": [
+        "Ventricular Arrhythmias",
+        "Atrial Fibrillation / Flutter rhythm control"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "Extreme",
+        "bleeding": "Low",
+        "hyperkalemia": "None",
+        "bradycardia": "High"
+      },
+      "pharmacokinetics": {
+        "half_life": "40-58 days",
+        "metabolism": "CYP3A4, CYP2C8, P-glycoprotein inhibitor",
+        "narrow_therapeutic_index": true
+      },
+      "rxcui": "703",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Amiodarone"
+    },
+    {
+      "id": "sotalol",
+      "name": "Sotalol",
+      "brand_names": [
+        "Betapace",
+        "Sorine"
+      ],
+      "class": "Class III Antiarrhythmic / Non-selective Beta Blocker",
+      "category": "Antiarrhythmics",
+      "common_dosages": [
+        "80 mg",
+        "120 mg",
+        "160 mg twice daily"
+      ],
+      "indications": [
+        "Ventricular Arrhythmias",
+        "Maintenance of normal sinus rhythm in AFib"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "Extreme",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "High"
+      },
+      "pharmacokinetics": {
+        "half_life": "12 hours",
+        "metabolism": "Renal elimination unchanged",
+        "narrow_therapeutic_index": true
+      },
+      "rxcui": "9947",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Sotalol"
+    },
+    {
+      "id": "flecainide",
+      "name": "Flecainide",
+      "brand_names": [
+        "Tambocor"
+      ],
+      "class": "Class IC Antiarrhythmic",
+      "category": "Antiarrhythmics",
+      "common_dosages": [
+        "50 mg",
+        "100 mg",
+        "150 mg twice daily"
+      ],
+      "indications": [
+        "Paroxysmal AFib without structural heart disease",
+        "PSVT"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "Moderate",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "Moderate"
+      },
+      "pharmacokinetics": {
+        "half_life": "20 hours",
+        "metabolism": "CYP2D6",
+        "narrow_therapeutic_index": true
+      },
+      "rxcui": "4113",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Flecainide"
+    },
+    {
+      "id": "warfarin",
+      "name": "Warfarin",
+      "brand_names": [
+        "Coumadin",
+        "Jantoven"
+      ],
+      "class": "Vitamin K Antagonist (Oral Anticoagulant)",
+      "category": "Anticoagulants",
+      "common_dosages": [
+        "1 mg",
+        "2 mg",
+        "2.5 mg",
+        "5 mg",
+        "7.5 mg daily titrated to INR"
+      ],
+      "indications": [
+        "Mechanical Heart Valves",
+        "Atrial Fibrillation thromboembolism prophylaxis",
+        "DVT/PE"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "Extreme",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "20-60 hours",
+        "metabolism": "CYP2C9, CYP3A4, CYP1A2",
+        "narrow_therapeutic_index": true
+      },
+      "rxcui": "11289",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Warfarin"
+    },
+    {
+      "id": "apixaban",
+      "name": "Apixaban",
+      "brand_names": [
+        "Eliquis"
+      ],
+      "class": "Direct Oral Anticoagulant (DOAC / Factor Xa Inhibitor)",
+      "category": "Anticoagulants",
+      "common_dosages": [
+        "2.5 mg",
+        "5 mg twice daily"
+      ],
+      "indications": [
+        "Non-valvular Atrial Fibrillation stroke prevention",
+        "DVT/PE treatment/prophylaxis"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "High",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "12 hours",
+        "metabolism": "CYP3A4 and P-gp substrate",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "1364430",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Apixaban"
+    },
+    {
+      "id": "rivaroxaban",
+      "name": "Rivaroxaban",
+      "brand_names": [
+        "Xarelto"
+      ],
+      "class": "Direct Factor Xa Inhibitor (DOAC)",
+      "category": "Anticoagulants",
+      "common_dosages": [
+        "10 mg",
+        "15 mg",
+        "20 mg daily with food"
+      ],
+      "indications": [
+        "Non-valvular AFib",
+        "Venous Thromboembolism",
+        "CAD/PAD risk reduction"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "High",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "5-9 hours (young), 11-13 hours (elderly)",
+        "metabolism": "CYP3A4 and P-gp substrate",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "1114195",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Rivaroxaban"
+    },
+    {
+      "id": "aspirin",
+      "name": "Aspirin",
+      "brand_names": [
+        "Bayer",
+        "Ecotrin",
+        "Empirin"
+      ],
+      "class": "Antiplatelet / Irreversible COX-1 Inhibitor",
+      "category": "Antiplatelets",
+      "common_dosages": [
+        "81 mg",
+        "325 mg daily"
+      ],
+      "indications": [
+        "Secondary prevention of MI, stroke, TIA",
+        "Post-PCI / Coronary Stenting"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "High",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "15-20 minutes (salicylate 2-30 hours)",
+        "metabolism": "Hepatic conjugation",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "1191",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Aspirin"
+    },
+    {
+      "id": "clopidogrel",
+      "name": "Clopidogrel",
+      "brand_names": [
+        "Plavix"
+      ],
+      "class": "P2Y12 Platelet Receptor Inhibitor",
+      "category": "Antiplatelets",
+      "common_dosages": [
+        "75 mg daily"
+      ],
+      "indications": [
+        "Dual Antiplatelet Therapy (DAPT) post-PCI",
+        "Recent MI / Stroke / PAD"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "High",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "6 hours (active metabolite 30 min)",
+        "metabolism": "Prodrug activated by CYP2C19",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "32968",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Clopidogrel"
+    },
+    {
+      "id": "ticagrelor",
+      "name": "Ticagrelor",
+      "brand_names": [
+        "Brilinta"
+      ],
+      "class": "Reversible P2Y12 Platelet Inhibitor",
+      "category": "Antiplatelets",
+      "common_dosages": [
+        "60 mg",
+        "90 mg twice daily"
+      ],
+      "indications": [
+        "Acute Coronary Syndrome (ACS)",
+        "High-risk post-MI"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "Extreme",
+        "hyperkalemia": "None",
+        "bradycardia": "Moderate"
+      },
+      "pharmacokinetics": {
+        "half_life": "7-9 hours",
+        "metabolism": "CYP3A4",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "1116632",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Ticagrelor"
+    },
+    {
+      "id": "carvedilol",
+      "name": "Carvedilol",
+      "brand_names": [
+        "Coreg",
+        "Coreg CR"
+      ],
+      "class": "Non-selective Beta & Alpha-1 Blocker",
+      "category": "Beta Blockers",
+      "common_dosages": [
+        "3.125 mg",
+        "6.25 mg",
+        "12.5 mg",
+        "25 mg twice daily"
+      ],
+      "indications": [
+        "Heart Failure with Reduced Ejection Fraction (HFrEF)",
+        "Hypertension",
+        "Post-MI LV dysfunction"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "High"
+      },
+      "pharmacokinetics": {
+        "half_life": "7-10 hours",
+        "metabolism": "CYP2D6, CYP2C9",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "20352",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Carvedilol"
+    },
+    {
+      "id": "metoprolol_succinate",
+      "name": "Metoprolol Succinate",
+      "brand_names": [
+        "Toprol-XL"
+      ],
+      "class": "Cardioselective Beta-1 Blocker (Extended Release)",
+      "category": "Beta Blockers",
+      "common_dosages": [
+        "25 mg",
+        "50 mg",
+        "100 mg",
+        "200 mg daily"
+      ],
+      "indications": [
+        "Heart Failure (HFrEF NYHA II-IV)",
+        "Angina Pectoris",
+        "Hypertension"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "High"
+      },
+      "pharmacokinetics": {
+        "half_life": "3-7 hours (plasma)",
+        "metabolism": "CYP2D6",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "866514",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Metoprolol%20Succinate"
+    },
+    {
+      "id": "lisinopril",
+      "name": "Lisinopril",
+      "brand_names": [
+        "Prinivil",
+        "Zestril"
+      ],
+      "class": "Angiotensin-Converting Enzyme (ACE) Inhibitor",
+      "category": "Heart Failure & RAAS Blockers",
+      "common_dosages": [
+        "5 mg",
+        "10 mg",
+        "20 mg",
+        "40 mg daily"
+      ],
+      "indications": [
+        "HFrEF",
+        "Hypertension",
+        "Post-Myocardial Infarction"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "High",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "12 hours",
+        "metabolism": "Excreted unchanged in urine",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "29046",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Lisinopril"
+    },
+    {
+      "id": "sacubitril_valsartan",
+      "name": "Sacubitril / Valsartan",
+      "brand_names": [
+        "Entresto"
+      ],
+      "class": "Angiotensin Receptor-Neprilysin Inhibitor (ARNI)",
+      "category": "Heart Failure & RAAS Blockers",
+      "common_dosages": [
+        "24/26 mg",
+        "49/51 mg",
+        "97/103 mg twice daily"
+      ],
+      "indications": [
+        "HFrEF NYHA Class II-IV guideline-directed medical therapy",
+        "Heart Failure with Preserved Ejection Fraction (HFpEF)"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "High",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "Sacubitrilat 11.5h, Valsartan 9.9h",
+        "metabolism": "Enzymatic cleavage",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "1656340",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Sacubitril%20%2F%20Valsartan"
+    },
+    {
+      "id": "spironolactone",
+      "name": "Spironolactone",
+      "brand_names": [
+        "Aldactone"
+      ],
+      "class": "Mineralocorticoid Receptor Antagonist (MRA / Potassium-Sparing Diuretic)",
+      "category": "Diuretics & MRAs",
+      "common_dosages": [
+        "12.5 mg",
+        "25 mg",
+        "50 mg daily"
+      ],
+      "indications": [
+        "HFrEF mortality reduction",
+        "Resistant Hypertension",
+        "Hyperaldosteronism"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "Extreme",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "Active metabolites (Canrenone) 16.5 hours",
+        "metabolism": "Hepatic conversion",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "9997",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Spironolactone"
+    },
+    {
+      "id": "eplerenone",
+      "name": "Eplerenone",
+      "brand_names": [
+        "Inspra"
+      ],
+      "class": "Selective Mineralocorticoid Receptor Antagonist",
+      "category": "Diuretics & MRAs",
+      "common_dosages": [
+        "25 mg",
+        "50 mg daily"
+      ],
+      "indications": [
+        "HFrEF post-MI with LV dysfunction",
+        "Hypertension"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "Extreme",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "4-6 hours",
+        "metabolism": "CYP3A4",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "298869",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Eplerenone"
+    },
+    {
+      "id": "digoxin",
+      "name": "Digoxin",
+      "brand_names": [
+        "Lanoxin",
+        "Digitek"
+      ],
+      "class": "Cardiac Glycoside (Na+/K+-ATPase Inhibitor)",
+      "category": "Inotropes & Cardiac Glycosides",
+      "common_dosages": [
+        "0.0625 mg",
+        "0.125 mg",
+        "0.25 mg daily"
+      ],
+      "indications": [
+        "Atrial Fibrillation rate control in HFrEF",
+        "Symptomatic HFrEF"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "Moderate",
+        "bleeding": "None",
+        "hyperkalemia": "Moderate",
+        "bradycardia": "Extreme"
+      },
+      "pharmacokinetics": {
+        "half_life": "36-48 hours",
+        "metabolism": "Renal clearance, P-gp substrate",
+        "narrow_therapeutic_index": true,
+        "target_serum_level": "0.5 - 0.9 ng/mL"
+      },
+      "rxcui": "3407",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Digoxin"
+    },
+    {
+      "id": "diltiazem",
+      "name": "Diltiazem",
+      "brand_names": [
+        "Cardizem",
+        "Tiazac",
+        "Dilacor"
+      ],
+      "class": "Non-dihydropyridine Calcium Channel Blocker",
+      "category": "Calcium Channel Blockers",
+      "common_dosages": [
+        "120 mg",
+        "180 mg",
+        "240 mg",
+        "300 mg daily (CD/XR)"
+      ],
+      "indications": [
+        "AFib/Flutter rate control with preserved EF",
+        "Angina",
+        "Hypertension"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "Extreme"
+      },
+      "pharmacokinetics": {
+        "half_life": "3-4.5 hours (extended formulation longer)",
+        "metabolism": "CYP3A4 substrate & moderate inhibitor",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "3443",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Diltiazem"
+    },
+    {
+      "id": "verapamil",
+      "name": "Verapamil",
+      "brand_names": [
+        "Calan",
+        "Verelan",
+        "Isoptin"
+      ],
+      "class": "Non-dihydropyridine Calcium Channel Blocker",
+      "category": "Calcium Channel Blockers",
+      "common_dosages": [
+        "120 mg",
+        "180 mg",
+        "240 mg daily (ER)"
+      ],
+      "indications": [
+        "Supraventricular Tachycardia",
+        "AFib rate control",
+        "Hypertrophic Cardiomyopathy"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "Extreme"
+      },
+      "pharmacokinetics": {
+        "half_life": "2.8-7.4 hours",
+        "metabolism": "CYP3A4, CYP1A2, P-gp inhibitor",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "11170",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Verapamil"
+    },
+    {
+      "id": "empagliflozin",
+      "name": "Empagliflozin",
+      "brand_names": [
+        "Jardiance"
+      ],
+      "class": "SGLT2 Inhibitor",
+      "category": "Heart Failure & RAAS Blockers",
+      "common_dosages": [
+        "10 mg",
+        "25 mg daily"
+      ],
+      "indications": [
+        "HFrEF & HFpEF hospitalization reduction",
+        "Type 2 Diabetes mellitus",
+        "CKD"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "12.4 hours",
+        "metabolism": "UGT glucuronidation",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "1545653",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Empagliflozin"
+    },
+    {
+      "id": "furosemide",
+      "name": "Furosemide",
+      "brand_names": [
+        "Lasix"
+      ],
+      "class": "Loop Diuretic",
+      "category": "Diuretics & MRAs",
+      "common_dosages": [
+        "20 mg",
+        "40 mg",
+        "80 mg once or twice daily"
+      ],
+      "indications": [
+        "Fluid overload / Pulmonary congestion in Heart Failure",
+        "Edema",
+        "Hypertension"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "Moderate",
+        "bleeding": "None",
+        "hyperkalemia": "Low",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "0.5 - 2 hours",
+        "metabolism": "Renal and hepatic glucuronidation",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "4603",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Furosemide"
+    },
+    {
+      "id": "azithromycin",
+      "name": "Azithromycin",
+      "brand_names": [
+        "Zithromax",
+        "Z-Pak"
+      ],
+      "class": "Macrolide Antibiotic",
+      "category": "Colliding Antibiotics & Macrolides",
+      "common_dosages": [
+        "250 mg",
+        "500 mg daily"
+      ],
+      "indications": [
+        "Community-Acquired Pneumonia",
+        "Exacerbations of COPD",
+        "Bacterial Pharyngitis"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "High",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "Low"
+      },
+      "pharmacokinetics": {
+        "half_life": "68 hours",
+        "metabolism": "Biliary excretion",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "18631",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Azithromycin"
+    },
+    {
+      "id": "clarithromycin",
+      "name": "Clarithromycin",
+      "brand_names": [
+        "Biaxin",
+        "Biaxin XL"
+      ],
+      "class": "Macrolide Antibiotic / Potent CYP3A4 Inhibitor",
+      "category": "Colliding Antibiotics & Macrolides",
+      "common_dosages": [
+        "250 mg",
+        "500 mg twice daily"
+      ],
+      "indications": [
+        "Helicobacter pylori eradication",
+        "Respiratory tract infections"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "Extreme",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "Low"
+      },
+      "pharmacokinetics": {
+        "half_life": "3-7 hours",
+        "metabolism": "CYP3A4 substrate & potent inhibitor",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "21212",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Clarithromycin"
+    },
+    {
+      "id": "ciprofloxacin",
+      "name": "Ciprofloxacin",
+      "brand_names": [
+        "Cipro"
+      ],
+      "class": "Fluoroquinolone Antibiotic",
+      "category": "Colliding Antibiotics & Macrolides",
+      "common_dosages": [
+        "250 mg",
+        "500 mg",
+        "750 mg twice daily"
+      ],
+      "indications": [
+        "Complicated UTI",
+        "Intra-abdominal infections"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "High",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "4 hours",
+        "metabolism": "CYP1A2 inhibitor",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "2551",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Ciprofloxacin"
+    },
+    {
+      "id": "ibuprofen",
+      "name": "Ibuprofen",
+      "brand_names": [
+        "Advil",
+        "Motrin"
+      ],
+      "class": "Nonsteroidal Anti-inflammatory Drug (NSAID)",
+      "category": "Colliding NSAIDs",
+      "common_dosages": [
+        "200 mg",
+        "400 mg",
+        "600 mg",
+        "800 mg 3-4 times daily"
+      ],
+      "indications": [
+        "Acute pain",
+        "Inflammatory arthritis",
+        "Fever"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "High",
+        "hyperkalemia": "Moderate",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "1.8-2 hours",
+        "metabolism": "CYP2C9",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "5640",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Ibuprofen"
+    },
+    {
+      "id": "naproxen",
+      "name": "Naproxen",
+      "brand_names": [
+        "Aleve",
+        "Naprosyn"
+      ],
+      "class": "Nonsteroidal Anti-inflammatory Drug (NSAID)",
+      "category": "Colliding NSAIDs",
+      "common_dosages": [
+        "220 mg",
+        "250 mg",
+        "500 mg twice daily"
+      ],
+      "indications": [
+        "Musculoskeletal pain",
+        "Gout",
+        "Osteoarthritis"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "High",
+        "hyperkalemia": "Moderate",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "12-17 hours",
+        "metabolism": "CYP2C9, CYP1A2",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "7258",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Naproxen"
+    },
+    {
+      "id": "fluconazole",
+      "name": "Fluconazole",
+      "brand_names": [
+        "Diflucan"
+      ],
+      "class": "Triazole Antifungal / CYP2C9 & CYP3A4 Inhibitor",
+      "category": "Colliding Antifungals & Azoles",
+      "common_dosages": [
+        "150 mg single dose",
+        "100-400 mg daily"
+      ],
+      "indications": [
+        "Candidiasis",
+        "Cryptococcal meningitis prophylaxis"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "High",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "30 hours",
+        "metabolism": "Strong CYP2C9 inhibitor, moderate CYP3A4 inhibitor",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "4450",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Fluconazole"
+    },
+    {
+      "id": "citalopram",
+      "name": "Citalopram",
+      "brand_names": [
+        "Celexa"
+      ],
+      "class": "Selective Serotonin Reuptake Inhibitor (SSRI)",
+      "category": "Colliding Psychotropics & SSRIs",
+      "common_dosages": [
+        "10 mg",
+        "20 mg",
+        "40 mg daily"
+      ],
+      "indications": [
+        "Major Depressive Disorder",
+        "Generalized Anxiety Disorder"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "High",
+        "bleeding": "Moderate",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "35 hours",
+        "metabolism": "CYP2C19, CYP3A4",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "2556",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Citalopram"
+    },
+    {
+      "id": "potassium_chloride",
+      "name": "Potassium Chloride",
+      "brand_names": [
+        "K-Dur",
+        "Klor-Con",
+        "Micro-K"
+      ],
+      "class": "Electrolyte Supplement",
+      "category": "Diuretics & MRAs",
+      "common_dosages": [
+        "10 mEq",
+        "20 mEq",
+        "40 mEq daily"
+      ],
+      "indications": [
+        "Hypokalemia prevention or treatment during diuretic therapy"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "Extreme",
+        "bradycardia": "High"
+      },
+      "pharmacokinetics": {
+        "half_life": "Immediate systemic electrolyte",
+        "metabolism": "Renal excretion",
+        "narrow_therapeutic_index": true
+      },
+      "rxcui": "8591",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Potassium%20Chloride"
+    },
+    {
+      "id": "propafenone",
+      "name": "Propafenone",
+      "brand_names": [
+        "Rythmol",
+        "Rythmol SR"
+      ],
+      "class": "Class IC Antiarrhythmic",
+      "category": "Antiarrhythmics",
+      "common_dosages": [
+        "150 mg",
+        "225 mg",
+        "300 mg TID"
+      ],
+      "indications": [
+        "Atrial Fibrillation",
+        "PSVT"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "Moderate",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "Moderate"
+      },
+      "pharmacokinetics": {
+        "half_life": "2-10 hours",
+        "metabolism": "CYP2D6, CYP3A4",
+        "narrow_therapeutic_index": true
+      },
+      "rxcui": "8750",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Propafenone"
+    },
+    {
+      "id": "dofetilide",
+      "name": "Dofetilide",
+      "brand_names": [
+        "Tikosyn"
+      ],
+      "class": "Class III Antiarrhythmic",
+      "category": "Antiarrhythmics",
+      "common_dosages": [
+        "125 mcg",
+        "250 mcg",
+        "500 mcg BID"
+      ],
+      "indications": [
+        "Maintenance of Sinus Rhythm in AFib/AFlutter"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "Extreme",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "Low"
+      },
+      "pharmacokinetics": {
+        "half_life": "10 hours",
+        "metabolism": "Renal excretion (80%), CYP3A4",
+        "narrow_therapeutic_index": true
+      },
+      "rxcui": "60548",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Dofetilide"
+    },
+    {
+      "id": "dronedarone",
+      "name": "Dronedarone",
+      "brand_names": [
+        "Multaq"
+      ],
+      "class": "Class III Antiarrhythmic",
+      "category": "Antiarrhythmics",
+      "common_dosages": [
+        "400 mg twice daily with meals"
+      ],
+      "indications": [
+        "Non-permanent AFib to reduce hospitalization"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "High",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "Moderate"
+      },
+      "pharmacokinetics": {
+        "half_life": "13-19 hours",
+        "metabolism": "CYP3A4 inhibitor & substrate",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "613391",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Dronedarone"
+    },
+    {
+      "id": "dabigatran",
+      "name": "Dabigatran",
+      "brand_names": [
+        "Pradaxa"
+      ],
+      "class": "Direct Thrombin Inhibitor (DOAC)",
+      "category": "Anticoagulants",
+      "common_dosages": [
+        "75 mg",
+        "150 mg twice daily"
+      ],
+      "indications": [
+        "Stroke prophylaxis in Non-valvular AFib",
+        "DVT/PE treatment"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "High",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "12-17 hours",
+        "metabolism": "Renal elimination (80%), P-gp substrate",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "1037042",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Dabigatran"
+    },
+    {
+      "id": "edoxaban",
+      "name": "Edoxaban",
+      "brand_names": [
+        "Savaysa",
+        "Lixiana"
+      ],
+      "class": "Direct Factor Xa Inhibitor (DOAC)",
+      "category": "Anticoagulants",
+      "common_dosages": [
+        "30 mg",
+        "60 mg once daily"
+      ],
+      "indications": [
+        "Non-valvular AFib stroke prevention",
+        "VTE"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "High",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "10-14 hours",
+        "metabolism": "Renal clearance (50%), P-gp substrate",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "1599538",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Edoxaban"
+    },
+    {
+      "id": "prasugrel",
+      "name": "Prasugrel",
+      "brand_names": [
+        "Effient"
+      ],
+      "class": "P2Y12 Platelet Inhibitor",
+      "category": "Antiplatelets",
+      "common_dosages": [
+        "5 mg",
+        "10 mg daily"
+      ],
+      "indications": [
+        "PCI for Acute Coronary Syndrome"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "Extreme",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "7 hours",
+        "metabolism": "Prodrug hydrolyzed by esterases, CYP3A4/2B6",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "614391",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Prasugrel"
+    },
+    {
+      "id": "bisoprolol",
+      "name": "Bisoprolol",
+      "brand_names": [
+        "Zebeta"
+      ],
+      "class": "Cardioselective Beta-1 Blocker",
+      "category": "Beta Blockers",
+      "common_dosages": [
+        "2.5 mg",
+        "5 mg",
+        "10 mg daily"
+      ],
+      "indications": [
+        "HFrEF",
+        "Hypertension"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "High"
+      },
+      "pharmacokinetics": {
+        "half_life": "9-12 hours",
+        "metabolism": "50% renal, 50% hepatic (CYP3A4/2D6)",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "19484",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Bisoprolol"
+    },
+    {
+      "id": "atenolol",
+      "name": "Atenolol",
+      "brand_names": [
+        "Tenormin"
+      ],
+      "class": "Cardioselective Beta-1 Blocker",
+      "category": "Beta Blockers",
+      "common_dosages": [
+        "25 mg",
+        "50 mg",
+        "100 mg daily"
+      ],
+      "indications": [
+        "Hypertension",
+        "Angina Pectoris"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "High"
+      },
+      "pharmacokinetics": {
+        "half_life": "6-7 hours",
+        "metabolism": "Renal elimination unchanged",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "1202",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Atenolol"
+    },
+    {
+      "id": "nebivolol",
+      "name": "Nebivolol",
+      "brand_names": [
+        "Bystolic"
+      ],
+      "class": "Beta-1 Selective & Nitric Oxide-Mediating Vasodilator",
+      "category": "Beta Blockers",
+      "common_dosages": [
+        "2.5 mg",
+        "5 mg",
+        "10 mg",
+        "20 mg daily"
+      ],
+      "indications": [
+        "Hypertension",
+        "Heart Failure"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "Moderate"
+      },
+      "pharmacokinetics": {
+        "half_life": "12 hours",
+        "metabolism": "CYP2D6",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "287995",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Nebivolol"
+    },
+    {
+      "id": "enalapril",
+      "name": "Enalapril",
+      "brand_names": [
+        "Vasotec"
+      ],
+      "class": "ACE Inhibitor",
+      "category": "Heart Failure & RAAS Blockers",
+      "common_dosages": [
+        "2.5 mg",
+        "5 mg",
+        "10 mg",
+        "20 mg BID"
+      ],
+      "indications": [
+        "HFrEF",
+        "Hypertension"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "High",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "11 hours (Enalaprilat)",
+        "metabolism": "Hepatic bioactivation to enalaprilat",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "3827",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Enalapril"
+    },
+    {
+      "id": "ramipril",
+      "name": "Ramipril",
+      "brand_names": [
+        "Altace"
+      ],
+      "class": "ACE Inhibitor",
+      "category": "Heart Failure & RAAS Blockers",
+      "common_dosages": [
+        "2.5 mg",
+        "5 mg",
+        "10 mg daily"
+      ],
+      "indications": [
+        "HFrEF post-MI",
+        "Cardiovascular risk reduction",
+        "Hypertension"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "High",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "13-17 hours",
+        "metabolism": "Hepatic conversion to ramiprilat",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "35208",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Ramipril"
+    },
+    {
+      "id": "losartan",
+      "name": "Losartan",
+      "brand_names": [
+        "Cozaar"
+      ],
+      "class": "Angiotensin II Receptor Blocker (ARB)",
+      "category": "Heart Failure & RAAS Blockers",
+      "common_dosages": [
+        "25 mg",
+        "50 mg",
+        "100 mg daily"
+      ],
+      "indications": [
+        "Hypertension",
+        "Diabetic Nephropathy",
+        "HFrEF ACEi-intolerant"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "High",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "2 hours (metabolite 6-9h)",
+        "metabolism": "CYP2C9, CYP3A4",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "203644",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Losartan"
+    },
+    {
+      "id": "candesartan",
+      "name": "Candesartan",
+      "brand_names": [
+        "Atacand"
+      ],
+      "class": "Angiotensin II Receptor Blocker (ARB)",
+      "category": "Heart Failure & RAAS Blockers",
+      "common_dosages": [
+        "4 mg",
+        "8 mg",
+        "16 mg",
+        "32 mg daily"
+      ],
+      "indications": [
+        "HFrEF (CHARM trial)",
+        "Hypertension"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "High",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "9 hours",
+        "metabolism": "Rapid bioactivation in GI tract",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "214354",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Candesartan"
+    },
+    {
+      "id": "dapagliflozin",
+      "name": "Dapagliflozin",
+      "brand_names": [
+        "Farxiga"
+      ],
+      "class": "SGLT2 Inhibitor",
+      "category": "Heart Failure & RAAS Blockers",
+      "common_dosages": [
+        "5 mg",
+        "10 mg daily"
+      ],
+      "indications": [
+        "HFrEF (DAPA-HF)",
+        "CKD progression reduction",
+        "Type 2 Diabetes"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "12.9 hours",
+        "metabolism": "UGT1A9 glucuronidation",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "1488574",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Dapagliflozin"
+    },
+    {
+      "id": "torsemide",
+      "name": "Torsemide",
+      "brand_names": [
+        "Demadex"
+      ],
+      "class": "Loop Diuretic",
+      "category": "Diuretics & MRAs",
+      "common_dosages": [
+        "10 mg",
+        "20 mg",
+        "50 mg daily"
+      ],
+      "indications": [
+        "Congestive Heart Failure edema",
+        "Renal failure"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "Moderate",
+        "bleeding": "None",
+        "hyperkalemia": "Low",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "3.5 hours",
+        "metabolism": "CYP2C9 (80%), renal clearance (20%)",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "38413",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Torsemide"
+    },
+    {
+      "id": "bumetanide",
+      "name": "Bumetanide",
+      "brand_names": [
+        "Bumex"
+      ],
+      "class": "Loop Diuretic",
+      "category": "Diuretics & MRAs",
+      "common_dosages": [
+        "0.5 mg",
+        "1 mg",
+        "2 mg daily"
+      ],
+      "indications": [
+        "Refractory edema in Heart Failure"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "Moderate",
+        "bleeding": "None",
+        "hyperkalemia": "Low",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "1-1.5 hours",
+        "metabolism": "Hepatic oxidation",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "1808",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Bumetanide"
+    },
+    {
+      "id": "ivabradine",
+      "name": "Ivabradine",
+      "brand_names": [
+        "Corlanor"
+      ],
+      "class": "Hyperpolarization-Activated Cyclic Nucleotide-Gated (HCN) Channel Blocker",
+      "category": "Heart Failure & RAAS Blockers",
+      "common_dosages": [
+        "5 mg",
+        "7.5 mg twice daily with food"
+      ],
+      "indications": [
+        "HFrEF with resting HR >= 70 bpm in sinus rhythm"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "Low",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "High"
+      },
+      "pharmacokinetics": {
+        "half_life": "2 hours",
+        "metabolism": "CYP3A4",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "1721536",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Ivabradine"
+    },
+    {
+      "id": "hydralazine",
+      "name": "Hydralazine",
+      "brand_names": [
+        "Apresoline"
+      ],
+      "class": "Direct Arterial Vasodilator",
+      "category": "Heart Failure & RAAS Blockers",
+      "common_dosages": [
+        "25 mg",
+        "50 mg",
+        "100 mg 3-4 times daily"
+      ],
+      "indications": [
+        "HFrEF in African American patients (A-HeFT)",
+        "Hypertension"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "3-7 hours",
+        "metabolism": "Polymorphic N-acetyltransferase",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "5470",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Hydralazine"
+    },
+    {
+      "id": "isosorbide_mononitrate",
+      "name": "Isosorbide Mononitrate",
+      "brand_names": [
+        "Imdur"
+      ],
+      "class": "Organic Nitrate Vasodilator",
+      "category": "Heart Failure & RAAS Blockers",
+      "common_dosages": [
+        "30 mg",
+        "60 mg",
+        "120 mg daily ER"
+      ],
+      "indications": [
+        "Angina Pectoris",
+        "HFrEF combination with hydralazine"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "5 hours",
+        "metabolism": "Hepatic denitrification",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "41493",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Isosorbide%20Mononitrate"
+    },
+    {
+      "id": "amlodipine",
+      "name": "Amlodipine",
+      "brand_names": [
+        "Norvasc"
+      ],
+      "class": "Dihydropyridine Calcium Channel Blocker",
+      "category": "Calcium Channel Blockers",
+      "common_dosages": [
+        "2.5 mg",
+        "5 mg",
+        "10 mg daily"
+      ],
+      "indications": [
+        "Hypertension",
+        "Coronary Artery Disease / Angina"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "30-50 hours",
+        "metabolism": "Extensively metabolized by CYP3A4",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "17767",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Amlodipine"
+    },
+    {
+      "id": "levofloxacin",
+      "name": "Levofloxacin",
+      "brand_names": [
+        "Levaquin"
+      ],
+      "class": "Fluoroquinolone Antibiotic",
+      "category": "Colliding Antibiotics & Macrolides",
+      "common_dosages": [
+        "500 mg",
+        "750 mg daily"
+      ],
+      "indications": [
+        "Pneumonia",
+        "Complicated UTI"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "High",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "6-8 hours",
+        "metabolism": "Renal excretion (87%)",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "82122",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Levofloxacin"
+    },
+    {
+      "id": "ketoconazole",
+      "name": "Ketoconazole",
+      "brand_names": [
+        "Nizoral"
+      ],
+      "class": "Azole Antifungal / Potent CYP3A4 & P-gp Inhibitor",
+      "category": "Colliding Antifungals & Azoles",
+      "common_dosages": [
+        "200 mg",
+        "400 mg daily"
+      ],
+      "indications": [
+        "Severe systemic fungal infections"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "High",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "8 hours",
+        "metabolism": "CYP3A4 potent inhibitor",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "6192",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Ketoconazole"
+    },
+    {
+      "id": "escitalopram",
+      "name": "Escitalopram",
+      "brand_names": [
+        "Lexapro"
+      ],
+      "class": "Selective Serotonin Reuptake Inhibitor (SSRI)",
+      "category": "Colliding Psychotropics & SSRIs",
+      "common_dosages": [
+        "10 mg",
+        "20 mg daily"
+      ],
+      "indications": [
+        "Major Depressive Disorder",
+        "Generalized Anxiety Disorder"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "High",
+        "bleeding": "Moderate",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "27-32 hours",
+        "metabolism": "CYP2C19, CYP3A4",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "321988",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Escitalopram"
+    },
+    {
+      "id": "sertraline",
+      "name": "Sertraline",
+      "brand_names": [
+        "Zoloft"
+      ],
+      "class": "Selective Serotonin Reuptake Inhibitor (SSRI)",
+      "category": "Colliding Psychotropics & SSRIs",
+      "common_dosages": [
+        "50 mg",
+        "100 mg daily"
+      ],
+      "indications": [
+        "Depression in cardiac patients (SADHART trial preferred agent)"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "Low",
+        "bleeding": "Moderate",
+        "hyperkalemia": "None",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "26 hours",
+        "metabolism": "CYP2B6, CYP2C19",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "36437",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Sertraline"
+    },
+    {
+      "id": "magnesium_sulfate",
+      "name": "Magnesium Sulfate",
+      "brand_names": [
+        "Magnesium Sulfate"
+      ],
+      "class": "Antiarrhythmic / Mineral Electrolyte",
+      "category": "Diuretics & MRAs",
+      "common_dosages": [
+        "1-2 g IV over 15 min"
+      ],
+      "indications": [
+        "Torsades de Pointes termination",
+        "Severe hypomagnesemia"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "None",
+        "bradycardia": "Moderate"
+      },
+      "pharmacokinetics": {
+        "half_life": "Rapid renal elimination",
+        "metabolism": "None",
+        "narrow_therapeutic_index": true
+      },
+      "rxcui": "6585",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Magnesium%20Sulfate"
+    }
+  ],
+  "collisions": [
+    {
+      "id": "COL-001",
+      "drug1": "amiodarone",
+      "drug2": "azithromycin",
+      "primary_hazard": "Fatal Arrhythmia / QT Prolongation",
+      "severity": "Contraindicated",
+      "tisdale_risk_points": 14,
+      "mechanism": "Additive block of rapid delayed rectifier cardiac potassium currents (IKr / hERG channel), triggering marked QTc prolongation (>500 ms) and precipitate Polymorphic Ventricular Tachycardia (Torsades de Pointes).",
+      "clinical_manifestation": "Syncope, palpitations, sudden cardiac arrest, ventricular fibrillation.",
+      "safer_alternatives": [
+        "Substitute Azithromycin with Doxycycline or Amoxicillin/Clavulanate for respiratory infections.",
+        "If atypical pneumonia coverage is mandatory, conduct daily baseline 12-lead ECG monitoring and maintain serum K+ > 4.5 mEq/L and Mg2+ > 2.0 mg/dL."
+      ],
+      "regulatory_alert": "FDA Black Box & ACC/AHA Class III Harm Warning"
+    },
+    {
+      "id": "COL-002",
+      "drug1": "amiodarone",
+      "drug2": "clarithromycin",
+      "primary_hazard": "Fatal Arrhythmia / QT Prolongation",
+      "severity": "Contraindicated",
+      "tisdale_risk_points": 16,
+      "mechanism": "Potent CYP3A4 inhibition by Clarithromycin markedly reduces Amiodarone clearance while synergistically prolonging ventricular repolarization (additive hERG channel blockade).",
+      "clinical_manifestation": "Profound QTc prolongation (>520ms), high risk of fatal Torsades de Pointes, severe bradycardia.",
+      "safer_alternatives": [
+        "Avoid co-administration. Use Cefuroxime, Doxycycline, or Aztreonam as alternative anti-infective therapy."
+      ],
+      "regulatory_alert": "Strictly Contraindicated (CredibleMeds Known Risk List 1)"
+    },
+    {
+      "id": "COL-003",
+      "drug1": "sotalol",
+      "drug2": "citalopram",
+      "primary_hazard": "Fatal Arrhythmia / QT Prolongation",
+      "severity": "Contraindicated",
+      "tisdale_risk_points": 13,
+      "mechanism": "Both agents cause concentration-dependent QT interval prolongation via potassium channel IKr delay. Co-prescribing elevates TdP risk by >6-fold.",
+      "clinical_manifestation": "Dizziness, Torsades de Pointes, ventricular tachycardia.",
+      "safer_alternatives": [
+        "Switch antidepressant to Sertraline or Bupropion (lowest QT prolongation risk in class)."
+      ],
+      "regulatory_alert": "FDA Drug Safety Communication - Avoid Citalopram with QT-prolonging antiarrhythmics"
+    },
+    {
+      "id": "COL-004",
+      "drug1": "warfarin",
+      "drug2": "aspirin",
+      "primary_hazard": "Major Hemorrhage / Bleeding",
+      "severity": "Major",
+      "bleeding_hazard_score": 4,
+      "mechanism": "Dual inhibition of hemostasis: Warfarin inhibits vitamin K-dependent clotting factors (II, VII, IX, X), while Aspirin irreversibly disables platelet TXA2-mediated aggregation. Gastric mucosal injury compounds bleeding risk.",
+      "clinical_manifestation": "Gastrointestinal hemorrhage, intracranial bleed, hematuria, extensive hematomas.",
+      "safer_alternatives": [
+        "Discontinue Aspirin unless patient has recent PCI/stent within 1-3 months (per 2024 ESC/ACC AFib guidelines, DOAC monotherapy is preferred).",
+        "Add Proton Pump Inhibitor (PPI: Pantoprazole 40mg daily) for gastroprotection if combination is strictly indicated."
+      ],
+      "regulatory_alert": "High Bleeding Risk Warning (HAS-BLED Score += 2)"
+    },
+    {
+      "id": "COL-005",
+      "drug1": "warfarin",
+      "drug2": "ibuprofen",
+      "primary_hazard": "Major Hemorrhage / Bleeding",
+      "severity": "Contraindicated",
+      "bleeding_hazard_score": 5,
+      "mechanism": "Ibuprofen displaces Warfarin from plasma albumin binding sites and competitively inhibits CYP2C9 metabolism, raising free Warfarin concentrations and INR, while causing direct gastric mucosal erosions.",
+      "clinical_manifestation": "Massive upper GI bleeding, dangerously elevated INR (>6.0), hemorrhagic stroke.",
+      "safer_alternatives": [
+        "Use Acetaminophen (Paracetamol) up to 2g/day or topical analgesics (Capsaicin, Lidocaine patch).",
+        "If anti-inflammatory therapy is critical, consult rheumatology and consider short-course intra-articular corticosteroid."
+      ],
+      "regulatory_alert": "Absolute Contraindication in Anticoagulated Patients"
+    },
+    {
+      "id": "COL-006",
+      "drug1": "apixaban",
+      "drug2": "ibuprofen",
+      "primary_hazard": "Major Hemorrhage / Bleeding",
+      "severity": "Major",
+      "bleeding_hazard_score": 4,
+      "mechanism": "NSAID antiplatelet effect and GI mucosal injury synergize with Factor Xa inhibition, increasing major bleeding risk 3- to 4-fold without offering antidote titration via INR.",
+      "clinical_manifestation": "Melena, hematemesis, severe drop in hemoglobin.",
+      "safer_alternatives": [
+        "Acetaminophen 500-1000 mg Q8H PRN, topical NSAID gel (Diclofenac 1% with minimal systemic absorption), or physical therapy."
+      ],
+      "regulatory_alert": "Boxed Bleeding Warning"
+    },
+    {
+      "id": "COL-007",
+      "drug1": "warfarin",
+      "drug2": "fluconazole",
+      "primary_hazard": "Major Hemorrhage / Bleeding",
+      "severity": "Major",
+      "bleeding_hazard_score": 4,
+      "mechanism": "Potent inhibition of CYP2C9 by Fluconazole blocks the clearance of the more potent S-warfarin enantiomer, causing rapid, severe spike in INR.",
+      "clinical_manifestation": "INR doubling within 48 hours, spontaneous epistaxis, gross hematuria, retroperitoneal hematoma.",
+      "safer_alternatives": [
+        "If Fluconazole is unavoidable, preemptively reduce Warfarin dose by 50% and check INR at 48 and 72 hours.",
+        "Consider topical antifungal or alternative class where appropriate."
+      ],
+      "regulatory_alert": "Critical Pharmacokinetic Interaction Alert"
+    },
+    {
+      "id": "COL-008",
+      "drug1": "spironolactone",
+      "drug2": "lisinopril",
+      "primary_hazard": "Electrolyte Shock / Severe Hyperkalemia",
+      "severity": "Major",
+      "hyperkalemia_score": 4,
+      "mechanism": "Dual blockade of aldosterone pathway (ACE inhibitor lowers circulating aldosterone; Spironolactone directly blocks mineralocorticoid receptor in distal nephron cortical collecting tubule). Impairs potassium excretion.",
+      "clinical_manifestation": "Serum K+ > 5.5 - 6.5 mEq/L, peaked T waves, PR prolongation, widening QRS, sine-wave arrest, muscle flaccidity.",
+      "safer_alternatives": [
+        "Monitor serum creatinine & K+ at baseline, 1 week, 4 weeks, and quarterly.",
+        "Ensure eGFR > 30 mL/min/1.73m2. Do not exceed Spironolactone 25 mg daily without nephrology co-management.",
+        "If K+ rises > 5.5 mEq/L, add potassium binder (Patiromer or Sodium Zirconium Cyclosilicate)."
+      ],
+      "regulatory_alert": "RALES Trial Warning: Routine K+ & Creatinine surveillance mandatory"
+    },
+    {
+      "id": "COL-009",
+      "drug1": "spironolactone",
+      "drug2": "potassium_chloride",
+      "primary_hazard": "Electrolyte Shock / Severe Hyperkalemia",
+      "severity": "Contraindicated",
+      "hyperkalemia_score": 5,
+      "mechanism": "Administering exogenous potassium to a patient whose renal potassium excretion is blocked by an MRA is the leading cause of iatrogenic lethal hyperkalemic cardiac arrest.",
+      "clinical_manifestation": "Lethal ventricular arrhythmias (ventricular fibrillation, asystole) triggered by sudden hyperkalemia (K+ > 6.5 mEq/L).",
+      "safer_alternatives": [
+        "Immediately discontinue Potassium supplements upon initiating Spironolactone or Eplerenone.",
+        "Supplement potassium only if documented hypokalemia (< 3.5 mEq/L) occurs despite MRA therapy."
+      ],
+      "regulatory_alert": "Strict Contraindication (High Mortality Hazard)"
+    },
+    {
+      "id": "COL-010",
+      "drug1": "sacubitril_valsartan",
+      "drug2": "spironolactone",
+      "primary_hazard": "Electrolyte Shock / Severe Hyperkalemia",
+      "severity": "Moderate",
+      "hyperkalemia_score": 3,
+      "mechanism": "Valsartan ARB component inhibits AT1 receptors while Sacubitril preserves natriuretic peptides, mildly elevating hyperkalemia risk when combined with MRA.",
+      "clinical_manifestation": "Progressive hyperkalemia, especially in patients with baseline CKD stage 3b+.",
+      "safer_alternatives": [
+        "Titrate cautiously with serial K+ checks every 2 weeks during dose uptitration.",
+        "Maintain dietary low-potassium counselling."
+      ],
+      "regulatory_alert": "PARADIGM-HF Guideline Protocol Monitoring"
+    },
+    {
+      "id": "COL-011",
+      "drug1": "carvedilol",
+      "drug2": "diltiazem",
+      "primary_hazard": "Profound Bradycardia / Heart Block",
+      "severity": "Contraindicated",
+      "bradycardia_score": 5,
+      "mechanism": "Synergistic negative inotropic, chronotropic, and dromotropic depression of the Sinoatrial (SA) and Atrioventricular (AV) nodes. Calcium channel blockade plus beta-adrenergic receptor blockade.",
+      "clinical_manifestation": "Profound sinus bradycardia (HR < 40 bpm), complete 3rd degree AV block, cardiogenic shock, syncope.",
+      "safer_alternatives": [
+        "Avoid combination. In HFrEF patients, beta-blocker (Carvedilol or Metoprolol Succinate) is mandatory guideline-directed medical therapy; Diltiazem is contraindicated.",
+        "If additional rate control is needed in AFib, consider low-dose Digoxin under expert supervision."
+      ],
+      "regulatory_alert": "AHA/ACC Heart Failure Guideline Contraindication"
+    },
+    {
+      "id": "COL-012",
+      "drug1": "metoprolol_succinate",
+      "drug2": "verapamil",
+      "primary_hazard": "Profound Bradycardia / Heart Block",
+      "severity": "Contraindicated",
+      "bradycardia_score": 5,
+      "mechanism": "Direct additive suppression of AV nodal conduction velocity and myocardial contractility. Verapamil also inhibits metoprolol CYP2D6 clearance.",
+      "clinical_manifestation": "Severe hemodynamic instability, high-grade AV block, pulmonary edema.",
+      "safer_alternatives": [
+        "Never combine oral Verapamil and Metoprolol in heart failure or conduction disease.",
+        "Use Dihydropyridine CCB (Amlodipine) if additional blood pressure reduction is required, as it does not suppress nodal conduction."
+      ],
+      "regulatory_alert": "Boxed Contraindication"
+    },
+    {
+      "id": "COL-013",
+      "drug1": "amiodarone",
+      "drug2": "digoxin",
+      "primary_hazard": "Digoxin Toxicity & Severe Bradycardia",
+      "severity": "Major",
+      "bradycardia_score": 4,
+      "mechanism": "Amiodarone inhibits renal and biliary P-glycoprotein efflux of Digoxin, doubling serum Digoxin levels, while both agents exert additive negative chronotropic effects on the AV node.",
+      "clinical_manifestation": "Nausea, xanthopsia (yellow-green halos), ventricular bigeminy, junctional escape rhythm, complete heart block.",
+      "safer_alternatives": [
+        "Immediately reduce Digoxin dose by 50% when initiating Amiodarone.",
+        "Obtain baseline and 1-week serum Digoxin level (target 0.5 - 0.8 ng/mL) and frequent ECG rhythm strips."
+      ],
+      "regulatory_alert": "High Alert Medication Interaction"
+    },
+    {
+      "id": "COL-014",
+      "drug1": "aspirin",
+      "drug2": "clopidogrel",
+      "primary_hazard": "Major Hemorrhage / Bleeding",
+      "severity": "Moderate",
+      "bleeding_hazard_score": 3,
+      "mechanism": "Dual Antiplatelet Therapy (DAPT) produces synergistic inhibition of primary platelet plug formation via both COX-1 and ADP P2Y12 pathways.",
+      "clinical_manifestation": "Ecchymosis, epistaxis, prolonged bleeding from venipuncture, GI ulceration.",
+      "safer_alternatives": [
+        "Standard guideline indication for 6-12 months post-ACS / Drug-Eluting Stent, but avoid extending beyond recommended duration without explicit ischemic indication.",
+        "Add PPI (Pantoprazole) to mitigate gastrointestinal ulceration risk."
+      ],
+      "regulatory_alert": "DAPT Consensus Guideline Regimen with Bleeding Precaution"
+    },
+    {
+      "id": "COL-015",
+      "drug1": "lisinopril",
+      "drug2": "ibuprofen",
+      "primary_hazard": "Acute Renal Failure & Antihypertensive Failure",
+      "severity": "Major",
+      "hyperkalemia_score": 3,
+      "mechanism": "NSAIDs inhibit renal prostaglandin synthesis, causing vasoconstriction of the afferent glomerular arteriole. ACE inhibitors dilate the efferent arteriole. Together, glomerular filtration pressure collapses ('Triple Whammy' risk with diuretics).",
+      "clinical_manifestation": "Acute kidney injury (abrupt rise in serum creatinine), fluid retention, worsening heart failure, elevated blood pressure.",
+      "safer_alternatives": [
+        "Avoid systemic NSAIDs in all patients with Heart Failure, CKD, or taking ACEi/ARBs.",
+        "Utilize non-nephrotoxic analgesics: Acetaminophen or topical therapy."
+      ],
+      "regulatory_alert": "Nephrotoxic Synergy Alert"
+    },
+    {
+      "id": "COL-016",
+      "drug1": "sacubitril_valsartan",
+      "drug2": "ibuprofen",
+      "primary_hazard": "Acute Renal Failure & Decompensated Heart Failure",
+      "severity": "Major",
+      "hyperkalemia_score": 3,
+      "mechanism": "NSAIDs inhibit renal vasodilating prostaglandins (afferent arteriole constriction), while valsartan blocks AT1 vasoconstriction (efferent arteriole dilation), precipitating acute decline in glomerular filtration rate (GFR).",
+      "clinical_manifestation": "Rapid decline in renal function, fluid retention, pulmonary congestion, hyperkalemia.",
+      "safer_alternatives": [
+        "Avoid NSAIDs in all HFrEF patients receiving ARNI therapy.",
+        "Use Acetaminophen (Paracetamol) or topical analgesics (Capsaicin / Lidocaine patch)."
+      ],
+      "regulatory_alert": "HFSA / ESC Heart Failure Guideline Warning"
+    },
+    {
+      "id": "COL-017",
+      "drug1": "furosemide",
+      "drug2": "ibuprofen",
+      "primary_hazard": "Diuretic Resistance & Acute Kidney Injury",
+      "severity": "Major",
+      "hyperkalemia_score": 2,
+      "mechanism": "Inhibition of renal prostaglandins by NSAIDs blunts furosemide-induced natriuresis and loop diuretic response, while precipitating pre-renal azotemia ('Triple Whammy' with RAAS blockers).",
+      "clinical_manifestation": "Oliguria, peripheral and pulmonary edema recurrence, acute creatinine surge.",
+      "safer_alternatives": [
+        "Discontinue NSAID; substitute with Acetaminophen.",
+        "If congestion worsens, optimize loop diuretic dose under nephrology/cardiology guidance."
+      ],
+      "regulatory_alert": "Triple Whammy Nephrotoxicity Alert"
+    },
+    {
+      "id": "COL-018",
+      "drug1": "apixaban",
+      "drug2": "aspirin",
+      "primary_hazard": "Major Hemorrhage / Bleeding",
+      "severity": "Major",
+      "bleeding_hazard_score": 4,
+      "mechanism": "Synergistic inhibition of primary platelet aggregation (Aspirin) and secondary coagulation cascade thrombin generation (Factor Xa inhibition by Apixaban).",
+      "clinical_manifestation": "Major gastrointestinal bleed, intracranial hemorrhage, extensive spontaneous ecchymoses.",
+      "safer_alternatives": [
+        "Per 2024 ESC/AHA guidelines, discontinue Aspirin after 12 months post-ACS/PCI and continue DOAC monotherapy.",
+        "Add gastroprotective PPI (Pantoprazole 40mg daily) if dual therapy is temporarily required."
+      ],
+      "regulatory_alert": "Elevated Bleeding Hazard Warning"
+    },
+    {
+      "id": "COL-019",
+      "drug1": "amiodarone",
+      "drug2": "citalopram",
+      "primary_hazard": "Fatal Arrhythmia / QT Prolongation",
+      "severity": "Contraindicated",
+      "tisdale_risk_points": 15,
+      "mechanism": "Both agents independently delay ventricular repolarization by blocking human ether-a-go-go-related gene (hERG) K+ channels. Concomitant use causes profound additive QTc prolongation.",
+      "clinical_manifestation": "Polymorphic ventricular tachycardia (Torsades de Pointes), syncope, sudden cardiac death.",
+      "safer_alternatives": [
+        "Switch antidepressant to Sertraline or Bupropion (lowest arrhythmogenic risk profile in class)."
+      ],
+      "regulatory_alert": "FDA Drug Safety Advisory: Extreme QTc Risk"
+    },
+    {
+      "id": "COL-020",
+      "drug1": "carvedilol",
+      "drug2": "digoxin",
+      "primary_hazard": "Profound Bradycardia & AV Block",
+      "severity": "Moderate",
+      "bradycardia_score": 3,
+      "mechanism": "Dual suppression of AV nodal conduction velocity and SA node automaticity. Both agents exert negative chronotropic and dromotropic actions.",
+      "clinical_manifestation": "Symptomatic sinus bradycardia (< 50 bpm), first- or second-degree AV block, fatigue, presyncope.",
+      "safer_alternatives": [
+        "Monitor resting heart rate and ECG PR interval during dose titration.",
+        "Target Digoxin serum trough concentration 0.5 - 0.8 ng/mL."
+      ],
+      "regulatory_alert": "Guideline-Directed Rate Control Precaution"
+    },
+    {
+      "id": "COL-021",
+      "drug1": "warfarin",
+      "drug2": "clarithromycin",
+      "primary_hazard": "Severe Hemorrhage / Dramatic INR Spike",
+      "severity": "Major",
+      "bleeding_hazard_score": 5,
+      "mechanism": "Clarithromycin inhibits CYP3A4-mediated Warfarin clearance and eradicates vitamin K-synthesizing intestinal microflora, producing rapid, unpredictable surges in INR and major bleeding risk.",
+      "clinical_manifestation": "Gross hematuria, gastrointestinal bleeding, spontaneous bruising, INR > 7.0.",
+      "safer_alternatives": [
+        "Avoid macrolides in anticoagulated patients. Use Amoxicillin, Cefuroxime, or Doxycycline for respiratory infections.",
+        "If Clarithromycin is strictly necessary, preemptively reduce Warfarin dose by 30-50% and perform INR surveillance every 48 hours."
+      ],
+      "regulatory_alert": "Critical Anticoagulation Interaction Warning"
+    },
+    {
+      "id": "COL-022",
+      "drug1": "dofetilide",
+      "drug2": "ciprofloxacin",
+      "primary_hazard": "Fatal Arrhythmia / Massive QTc Prolongation",
+      "severity": "Contraindicated",
+      "tisdale_risk_points": 17,
+      "mechanism": "Ciprofloxacin potently inhibits renal cation transport and CYP3A4, markedly increasing Dofetilide plasma concentrations while exerting additive hERG potassium channel blockade.",
+      "clinical_manifestation": "Severe QTc prolongation > 550 ms, high risk of fatal Torsades de Pointes and ventricular fibrillation.",
+      "safer_alternatives": [
+        "Absolute contraindication. Use Doxycycline or Cefpodoxime for bacterial infection.",
+        "Maintain inpatient continuous telemetry if cardiac antiarrhythmic adjustment is required."
+      ],
+      "regulatory_alert": "FDA Boxed Warning — Contraindicated with Dofetilide"
+    },
+    {
+      "id": "COL-023",
+      "drug1": "sotalol",
+      "drug2": "levofloxacin",
+      "primary_hazard": "Fatal Arrhythmia / Torsades de Pointes",
+      "severity": "Contraindicated",
+      "tisdale_risk_points": 16,
+      "mechanism": "Additive inhibition of myocardial delayed rectifier potassium currents (IKr). Both agents independently prolong ventricular action potential duration.",
+      "clinical_manifestation": "Polymorphic ventricular tachycardia, syncope, sudden cardiac death.",
+      "safer_alternatives": [
+        "Avoid fluoroquinolones. Prescribe Amoxicillin/Clavulanate or Ceftriaxone for respiratory infections."
+      ],
+      "regulatory_alert": "CredibleMeds Known Risk List 1 Interaction"
+    },
+    {
+      "id": "COL-024",
+      "drug1": "warfarin",
+      "drug2": "naproxen",
+      "primary_hazard": "Major Hemorrhage / Upper Gastrointestinal Bleeding",
+      "severity": "Contraindicated",
+      "bleeding_hazard_score": 5,
+      "mechanism": "Naproxen inhibits COX-1 platelete TXA2 and induces gastric mucosal ulceration while displacing Warfarin from protein binding sites, resulting in severe synergistic hemorrhagic diathesis.",
+      "clinical_manifestation": "Massive upper gastrointestinal bleed, gross hematuria, retroperitoneal hemorrhage.",
+      "safer_alternatives": [
+        "Substitute with Acetaminophen up to 2 g/day. For inflammatory pain, consider topical Lidocaine or consult pain management."
+      ],
+      "regulatory_alert": "Boxed Warning: Major Hemorrhage Risk"
+    },
+    {
+      "id": "COL-025",
+      "drug1": "dabigatran",
+      "drug2": "ketoconazole",
+      "primary_hazard": "Extreme Dabigatran Accumulation & Fatal Bleeding",
+      "severity": "Contraindicated",
+      "bleeding_hazard_score": 5,
+      "mechanism": "Ketoconazole is a potent P-glycoprotein (P-gp) efflux transporter inhibitor, increasing Dabigatran bioavailability and peak plasma concentrations by >150%.",
+      "clinical_manifestation": "Spontaneous major bleeding, hemorrhagic shock, lack of rapid reversal titration.",
+      "safer_alternatives": [
+        "Avoid concomitant systemic ketoconazole with Dabigatran. Use topical antifungal or echinocandins for invasive mycoses."
+      ],
+      "regulatory_alert": "FDA Contraindication for Systemic Azoles with Dabigatran"
+    },
+    {
+      "id": "COL-026",
+      "drug1": "empagliflozin",
+      "drug2": "furosemide",
+      "primary_hazard": "Severe Volume Depletion & Orthostatic Hypotension",
+      "severity": "Moderate",
+      "hyperkalemia_score": 1,
+      "mechanism": "Synergistic osmotic diuresis (SGLT2 glucosuria) and loop natriuresis (Furosemide inhibition of Na+/K+/2Cl- cotransporter in the thick ascending limb of Henle).",
+      "clinical_manifestation": "Dehydration, acute prerenal azotemia, orthostatic syncope, dizziness.",
+      "safer_alternatives": [
+        "Down-titrate Furosemide dose by 25-50% when initiating Empagliflozin in euvolemic patients.",
+        "Instruct patient on daily weight and blood pressure monitoring."
+      ],
+      "regulatory_alert": "EMPEROR-Reduced Clinical Protocol Monitoring Guideline"
+    }
+  ]
+}

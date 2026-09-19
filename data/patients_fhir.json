@@ -1,0 +1,910 @@
+{
+  "resourceType": "Bundle",
+  "id": "cardiosuite-patient-bundle-v3",
+  "type": "collection",
+  "timestamp": "2026-09-19T00:00:00Z",
+  "entry": [
+    {
+      "resourceType": "Bundle",
+      "type": "collection",
+      "entry": [
+        {
+          "resourceType": "Patient",
+          "id": "CASE-101",
+          "identifier": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.4.6",
+              "value": "MRN101"
+            }
+          ],
+          "name": [
+            {
+              "family": "Chen",
+              "given": [
+                "Robert"
+              ]
+            }
+          ],
+          "gender": "male",
+          "birthDate": "1959-01-01"
+        },
+        {
+          "resourceType": "Condition",
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "I50.20",
+                "display": "HFrEF"
+              }
+            ]
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "category": [
+            {
+              "coding": [
+                {
+                  "code": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "8867-4",
+                "display": "Heart rate"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 78,
+            "unit": "/min"
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "55284-4",
+                "display": "Blood pressure"
+              }
+            ]
+          },
+          "component": [
+            {
+              "code": {
+                "coding": [
+                  {
+                    "code": "8480-6"
+                  }
+                ]
+              },
+              "valueQuantity": {
+                "value": 138
+              }
+            },
+            {
+              "code": {
+                "coding": [
+                  {
+                    "code": "8462-4"
+                  }
+                ]
+              },
+              "valueQuantity": {
+                "value": 84
+              }
+            }
+          ]
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "6298-4",
+                "display": "Potassium"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 5.8,
+            "unit": "mEq/L"
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "62238-1",
+                "display": "eGFR"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 48
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "8634-6",
+                "display": "QTc"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 442,
+            "unit": "ms"
+          }
+        }
+      ]
+    },
+    {
+      "resourceType": "Bundle",
+      "type": "collection",
+      "entry": [
+        {
+          "resourceType": "Patient",
+          "id": "CASE-102",
+          "identifier": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.4.6",
+              "value": "MRN102"
+            }
+          ],
+          "name": [
+            {
+              "family": "Vance",
+              "given": [
+                "Eleanor"
+              ]
+            }
+          ],
+          "gender": "female",
+          "birthDate": "1952-01-01"
+        },
+        {
+          "resourceType": "Condition",
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "I35.0",
+                "display": "Aortic Stenosis"
+              }
+            ]
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "category": [
+            {
+              "coding": [
+                {
+                  "code": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "8867-4",
+                "display": "Heart rate"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 72,
+            "unit": "/min"
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "55284-4",
+                "display": "Blood pressure"
+              }
+            ]
+          },
+          "component": [
+            {
+              "code": {
+                "coding": [
+                  {
+                    "code": "8480-6"
+                  }
+                ]
+              },
+              "valueQuantity": {
+                "value": 112
+              }
+            },
+            {
+              "code": {
+                "coding": [
+                  {
+                    "code": "8462-4"
+                  }
+                ]
+              },
+              "valueQuantity": {
+                "value": 82
+              }
+            }
+          ]
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "6298-4",
+                "display": "Potassium"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 4.1,
+            "unit": "mEq/L"
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "62238-1",
+                "display": "eGFR"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 62
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "8634-6",
+                "display": "QTc"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 468,
+            "unit": "ms"
+          }
+        }
+      ]
+    },
+    {
+      "resourceType": "Bundle",
+      "type": "collection",
+      "entry": [
+        {
+          "resourceType": "Patient",
+          "id": "CASE-103",
+          "identifier": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.4.6",
+              "value": "MRN103"
+            }
+          ],
+          "name": [
+            {
+              "family": "Thorne",
+              "given": [
+                "Marcus"
+              ]
+            }
+          ],
+          "gender": "male",
+          "birthDate": "1968-01-01"
+        },
+        {
+          "resourceType": "Condition",
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "I06.1",
+                "display": "Aortic Regurgitation"
+              }
+            ]
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "category": [
+            {
+              "coding": [
+                {
+                  "code": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "8867-4",
+                "display": "Heart rate"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 114,
+            "unit": "/min"
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "55284-4",
+                "display": "Blood pressure"
+              }
+            ]
+          },
+          "component": [
+            {
+              "code": {
+                "coding": [
+                  {
+                    "code": "8480-6"
+                  }
+                ]
+              },
+              "valueQuantity": {
+                "value": 108
+              }
+            },
+            {
+              "code": {
+                "coding": [
+                  {
+                    "code": "8462-4"
+                  }
+                ]
+              },
+              "valueQuantity": {
+                "value": 68
+              }
+            }
+          ]
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "6298-4",
+                "display": "Potassium"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 4.3,
+            "unit": "mEq/L"
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "62238-1",
+                "display": "eGFR"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 71
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "8634-6",
+                "display": "QTc"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 521,
+            "unit": "ms"
+          }
+        }
+      ]
+    },
+    {
+      "resourceType": "Bundle",
+      "type": "collection",
+      "entry": [
+        {
+          "resourceType": "Patient",
+          "id": "CASE-104",
+          "identifier": [
+            {
+              "system": "urn:oid:2.16.840.1.113883.4.6",
+              "value": "MRN104"
+            }
+          ],
+          "name": [
+            {
+              "family": "Wright",
+              "given": [
+                "Samantha"
+              ]
+            }
+          ],
+          "gender": "female",
+          "birthDate": "1984-01-01"
+        },
+        {
+          "resourceType": "Condition",
+          "code": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "Z03.89",
+                "display": "Normal Screening"
+              }
+            ]
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "category": [
+            {
+              "coding": [
+                {
+                  "code": "vital-signs"
+                }
+              ]
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "8867-4",
+                "display": "Heart rate"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 56,
+            "unit": "/min"
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "55284-4",
+                "display": "Blood pressure"
+              }
+            ]
+          },
+          "component": [
+            {
+              "code": {
+                "coding": [
+                  {
+                    "code": "8480-6"
+                  }
+                ]
+              },
+              "valueQuantity": {
+                "value": 118
+              }
+            },
+            {
+              "code": {
+                "coding": [
+                  {
+                    "code": "8462-4"
+                  }
+                ]
+              },
+              "valueQuantity": {
+                "value": 74
+              }
+            }
+          ]
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "6298-4",
+                "display": "Potassium"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 4,
+            "unit": "mEq/L"
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "62238-1",
+                "display": "eGFR"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 95
+          }
+        },
+        {
+          "resourceType": "Observation",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "8634-6",
+                "display": "QTc"
+              }
+            ]
+          },
+          "valueQuantity": {
+            "value": 398,
+            "unit": "ms"
+          }
+        }
+      ]
+    }
+  ],
+  "cardiosuite_cases": [
+    {
+      "id": "CASE-101",
+      "patient_name": "Robert Chen",
+      "age": 67,
+      "gender": "Male",
+      "mrn": "CS-948201",
+      "admission_date": "2026-09-18",
+      "presenting_complaint": "Progressive exertional dyspnea (NYHA III), orthopnea, bilateral lower extremity 2+ pitting edema, and severe knee osteoarthritis pain.",
+      "clinical_history": "Ischemic cardiomyopathy s/p anterior STEMI (2022), Hypertension, Stage 3a Chronic Kidney Disease (baseline eGFR 48 mL/min).",
+      "vitals": {
+        "heart_rate": 78,
+        "blood_pressure": "138/84 mmHg",
+        "o2_sat": "94% on room air",
+        "respiratory_rate": 20
+      },
+      "echo_preset": {
+        "preset_id": "severe_hf",
+        "title": "Dilated LV with Severely Depressed Systolic Function",
+        "target_ef": 27.5,
+        "edv_ml": 218,
+        "esv_ml": 158,
+        "stroke_volume_ml": 60,
+        "cardiac_output_lpm": 4.68,
+        "classification": "Severely Reduced / Heart Failure",
+        "wall_motion": "Diffuse global hypokinesia with apical akinesia",
+        "mitral_inflow": "Restrictive filling pattern (E/A > 2.0)",
+        "lvedd_mm": 64,
+        "lvesd_mm": 54
+      },
+      "acoustic_preset": {
+        "preset_id": "mitral_regurg",
+        "title": "Mitral Regurgitation (Functional / Secondary)",
+        "condition": "Mitral Regurgitation",
+        "timing": "Holosystolic (Plateau)",
+        "frequency_band": "High frequency blowing murmur (200 - 450 Hz)",
+        "intensity": "Grade 3/6",
+        "location": "Cardiac Apex radiating to left axilla",
+        "s1_s2_status": "Soft S1 obscured by regurgitant jet; prominent S3 gallop audible in early diastole",
+        "triage_urgency": "Urgent",
+        "referral_action": "Urgent Comprehensive Transthoracic Echocardiogram & Heart Failure clinic review within 48-72 hours."
+      },
+      "prescriptions": [
+        {
+          "drug_id": "sacubitril_valsartan",
+          "dose": "49/51 mg BID",
+          "route": "Oral",
+          "prescriber": "Cardiology Dept"
+        },
+        {
+          "drug_id": "spironolactone",
+          "dose": "25 mg daily",
+          "route": "Oral",
+          "prescriber": "Cardiology Dept"
+        },
+        {
+          "drug_id": "carvedilol",
+          "dose": "12.5 mg BID",
+          "route": "Oral",
+          "prescriber": "Cardiology Dept"
+        },
+        {
+          "drug_id": "furosemide",
+          "dose": "40 mg BID",
+          "route": "Oral",
+          "prescriber": "Cardiology Dept"
+        },
+        {
+          "drug_id": "ibuprofen",
+          "dose": "600 mg TID PRN",
+          "route": "Oral (Self-purchased OTC for knee osteoarthritis)",
+          "prescriber": "Self / Over-The-Counter"
+        },
+        {
+          "drug_id": "potassium_chloride",
+          "dose": "20 mEq daily",
+          "route": "Oral",
+          "prescriber": "Primary Care Clinic"
+        }
+      ],
+      "collision_alerts": [
+        "COL-009",
+        "COL-010",
+        "COL-015"
+      ],
+      "primary_risk_flag": "Extreme Hyperkalemia & Acute Renal Failure Hazard (MRA + ARNI + KCl + NSAID)",
+      "physician_notes": "Patient started self-medicating with Ibuprofen 600mg TID for knee pain 10 days ago, while taking Spironolactone and Potassium supplements concurrently. Serum K+ is at high risk of fatal elevation.",
+      "fhir_patient_ref": "Patient/CASE-101",
+      "fhir_condition_code": "I50.20",
+      "k": 5.8,
+      "egfr": 48,
+      "qtc": 442
+    },
+    {
+      "id": "CASE-102",
+      "patient_name": "Eleanor Vance",
+      "age": 74,
+      "gender": "Female",
+      "mrn": "CS-783109",
+      "admission_date": "2026-09-17",
+      "presenting_complaint": "Recurrent lightheadedness, near-syncope while climbing stairs, and angina on exertion.",
+      "clinical_history": "Known calcific aortic valve disease, Permanent Atrial Fibrillation, prior transient ischemic attack (2024), Hypertension.",
+      "vitals": {
+        "heart_rate": 72,
+        "blood_pressure": "112/82 mmHg",
+        "o2_sat": "97% on room air",
+        "respiratory_rate": 16
+      },
+      "echo_preset": {
+        "preset_id": "preserved_as",
+        "title": "Concentric LV Hypertrophy with Preserved LVEF & Calcified Aortic Valve",
+        "target_ef": 58.2,
+        "edv_ml": 115,
+        "esv_ml": 48,
+        "stroke_volume_ml": 67,
+        "cardiac_output_lpm": 4.82,
+        "classification": "Normal (Preserved Systolic Function)",
+        "wall_motion": "Concentric hypertrophy, preserved global radial contractility",
+        "mitral_inflow": "Impaired relaxation (Grade I diastolic dysfunction)",
+        "lvedd_mm": 45,
+        "lvesd_mm": 28
+      },
+      "acoustic_preset": {
+        "preset_id": "aortic_stenosis",
+        "title": "Severe Aortic Stenosis (Harsh Ejection Systolic Murmur)",
+        "condition": "Aortic Stenosis",
+        "timing": "Midsystolic Crescendo-Decrescendo",
+        "frequency_band": "Harsh, low-to-medium frequency diamond murmur (100 - 350 Hz)",
+        "intensity": "Grade 4/6 with palpable systolic thrill",
+        "location": "2nd right intercostal space with radiation to bilateral carotid arteries",
+        "s1_s2_status": "Single or paradoxically split S2; diminished aortic component A2",
+        "triage_urgency": "Emergency / Critical",
+        "referral_action": "Emergent Heart Valve Team evaluation for Transcatheter Aortic Valve Implantation (TAVI) or Surgical AVR; strict warning against vasodilators."
+      },
+      "prescriptions": [
+        {
+          "drug_id": "warfarin",
+          "dose": "4 mg daily (INR target 2.0-3.0)",
+          "route": "Oral",
+          "prescriber": "Anticoagulation Clinic"
+        },
+        {
+          "drug_id": "aspirin",
+          "dose": "81 mg daily",
+          "route": "Oral",
+          "prescriber": "Primary Care"
+        },
+        {
+          "drug_id": "metoprolol_succinate",
+          "dose": "50 mg daily",
+          "route": "Oral",
+          "prescriber": "Cardiology"
+        },
+        {
+          "drug_id": "clarithromycin",
+          "dose": "500 mg BID (day 3 of 7 for bronchitis)",
+          "route": "Oral",
+          "prescriber": "Urgent Care Clinic"
+        }
+      ],
+      "collision_alerts": [
+        "COL-004",
+        "COL-002"
+      ],
+      "primary_risk_flag": "Major Hemorrhage (Warfarin + Aspirin) & Arrhythmia/CYP3A4 Inhibition (Clarithromycin)",
+      "physician_notes": "Symptomatic severe aortic stenosis (syncope + angina triad) mandates urgent valve intervention. Urgent care prescribed Clarithromycin which inhibits Warfarin clearance and prolongs QT. Dual antithrombotic therapy confers unacceptably high intracranial bleeding hazard.",
+      "fhir_patient_ref": "Patient/CASE-102",
+      "fhir_condition_code": "I35.0",
+      "k": 4.1,
+      "egfr": 62,
+      "qtc": 468
+    },
+    {
+      "id": "CASE-103",
+      "patient_name": "Marcus Aurelius Thorne",
+      "age": 58,
+      "gender": "Male",
+      "mrn": "CS-415892",
+      "admission_date": "2026-09-19",
+      "presenting_complaint": "Sudden onset rapid palpitations, presyncope, and chest tightness lasting 45 minutes.",
+      "clinical_history": "Paroxysmal Atrial Fibrillation with rapid ventricular response, prior catheter ablation (2023), non-obstructive coronary disease.",
+      "vitals": {
+        "heart_rate": 114,
+        "blood_pressure": "108/68 mmHg",
+        "o2_sat": "96% on room air",
+        "respiratory_rate": 18
+      },
+      "echo_preset": {
+        "preset_id": "moderate_dysfunction",
+        "title": "Mild LV Dilation with Moderately Reduced Ejection Fraction",
+        "target_ef": 36.4,
+        "edv_ml": 162,
+        "esv_ml": 103,
+        "stroke_volume_ml": 59,
+        "cardiac_output_lpm": 6.72,
+        "classification": "Moderately Reduced",
+        "wall_motion": "Hypokinesia of inferior and posterior walls",
+        "mitral_inflow": "Elevated filling pressure with left atrial volume index 44 mL/m2",
+        "lvedd_mm": 56,
+        "lvesd_mm": 44
+      },
+      "acoustic_preset": {
+        "preset_id": "aortic_regurg",
+        "title": "Aortic Regurgitation (Early Diastolic Decrescendo Murmur)",
+        "condition": "Aortic Regurgitation",
+        "timing": "Early Diastolic Decrescendo",
+        "frequency_band": "High-pitched blowing murmur (180 - 500 Hz)",
+        "intensity": "Grade 2/6",
+        "location": "3rd left intercostal space (Erb's point) with patient leaning forward in expiration",
+        "s1_s2_status": "Accentuated A2; wide pulse pressure (40 mmHg) with peripheral bounding pulses",
+        "triage_urgency": "Urgent",
+        "referral_action": "Schedule Elective Valvular Echocardiography with regurgitant volume quantification and aortic root dimensions."
+      },
+      "prescriptions": [
+        {
+          "drug_id": "amiodarone",
+          "dose": "200 mg daily",
+          "route": "Oral",
+          "prescriber": "Electrophysiologist"
+        },
+        {
+          "drug_id": "azithromycin",
+          "dose": "500 mg day 1, 250 mg days 2-5 (for sinusitis)",
+          "route": "Oral",
+          "prescriber": "Walk-In Clinic"
+        },
+        {
+          "drug_id": "apixaban",
+          "dose": "5 mg BID",
+          "route": "Oral",
+          "prescriber": "Electrophysiologist"
+        },
+        {
+          "drug_id": "citalopram",
+          "dose": "20 mg daily",
+          "route": "Oral",
+          "prescriber": "Psychiatry"
+        }
+      ],
+      "collision_alerts": [
+        "COL-001",
+        "COL-003"
+      ],
+      "primary_risk_flag": "Fatal Torsades de Pointes Risk (Amiodarone + Azithromycin + Citalopram Triple QT prolonging agents)",
+      "physician_notes": "CRITICAL PHARMACOVIGILANCE HAZARD: Patient is taking three potent hERG potassium channel blocking drugs simultaneously. Immediate ECG QTc measurement and discontinuation of Azithromycin & Citalopram required.",
+      "fhir_patient_ref": "Patient/CASE-103",
+      "fhir_condition_code": "I06.1",
+      "k": 4.3,
+      "egfr": 71,
+      "qtc": 521
+    },
+    {
+      "id": "CASE-104",
+      "patient_name": "Samantha Wright",
+      "age": 42,
+      "gender": "Female",
+      "mrn": "CS-109432",
+      "admission_date": "2026-09-15",
+      "presenting_complaint": "Annual executive cardiovascular health screening. Completely asymptomatic, active marathon runner.",
+      "clinical_history": "No known cardiovascular disease. Mild family history of premature CAD (maternal uncle at age 62).",
+      "vitals": {
+        "heart_rate": 56,
+        "blood_pressure": "118/74 mmHg",
+        "o2_sat": "99% on room air",
+        "respiratory_rate": 14
+      },
+      "echo_preset": {
+        "preset_id": "normal_echo",
+        "title": "Vigorous Normal Biventricular Systolic Function",
+        "target_ef": 64.8,
+        "edv_ml": 128,
+        "esv_ml": 45,
+        "stroke_volume_ml": 83,
+        "cardiac_output_lpm": 4.65,
+        "classification": "Normal (Optimal Cardiac Performance)",
+        "wall_motion": "Homogeneous hyperdynamic symmetric concentric wall thickening",
+        "mitral_inflow": "Normal young adult filling pattern (E/A ratio 1.6)",
+        "lvedd_mm": 47,
+        "lvesd_mm": 29
+      },
+      "acoustic_preset": {
+        "preset_id": "normal_heart_sounds",
+        "title": "Normal Heart Sounds (Physiological S1 & S2 Lub-Dub)",
+        "condition": "Normal S1/S2 Lub-Dub",
+        "timing": "Clear Physiological Intervals",
+        "frequency_band": "Crisp acoustic valve closure impulses (S1: 30-100Hz, S2: 40-150Hz)",
+        "intensity": "Normal physiological intensity",
+        "location": "All four classical cardiac auscultation areas",
+        "s1_s2_status": "Normal physiological split of S2 during inspiration; zero pathological murmurs, clicks, or rubs",
+        "triage_urgency": "Routine",
+        "referral_action": "No cardiology referral indicated. Routine annual preventive health maintenance."
+      },
+      "prescriptions": [
+        {
+          "drug_id": "empagliflozin",
+          "dose": "10 mg daily (Metabolic optimization)",
+          "route": "Oral",
+          "prescriber": "Endocrinology"
+        }
+      ],
+      "collision_alerts": [],
+      "primary_risk_flag": "No Drug Collision Detected (Optimal Safety Profile)",
+      "physician_notes": "Exemplary cardiovascular baseline. Normal ejection fraction, pristine physiological auscultation, and no pharmacological hazards.",
+      "fhir_patient_ref": "Patient/CASE-104",
+      "fhir_condition_code": "Z03.89",
+      "k": 4,
+      "egfr": 95,
+      "qtc": 398
+    }
+  ]
+}

@@ -1,0 +1,1135 @@
+/* ==========================================================================
+   CardioSuite AI - Light Neumorphic & Soft Glassmorphic Clinical Design System
+   Matches Reference: "General Indicators of the Heart" with 3D Organ Canvas
+   ========================================================================== */
+
+:root {
+  --bg-app: #edf2f7;
+  --bg-app-subtle: #f4f7fb;
+  --card-bg: #ffffff;
+  --card-bg-subtle: #f8fafc;
+  --card-border: rgba(226, 232, 240, 0.85);
+
+  --blue-primary: #2563eb;
+  --blue-hover: #1d4ed8;
+  --blue-light: #eff6ff;
+  --blue-border: #bfdbfe;
+
+  --red-accent: #ef4444;
+  --red-light: #fef2f2;
+  --red-border: #fecaca;
+
+  --emerald-accent: #10b981;
+  --emerald-light: #ecfdf5;
+  --emerald-border: #a7f3d0;
+
+  --amber-accent: #f59e0b;
+  --amber-light: #fffbeb;
+  --amber-border: #fde68a;
+
+  --text-dark: #0f172a;
+  --text-heading: #1e293b;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, monospace;
+
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 30px;
+
+  --shadow-soft: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.02);
+  --shadow-float: 0 20px 35px -8px rgba(15, 23, 42, 0.08), 0 10px 15px -3px rgba(15, 23, 42, 0.03);
+  --shadow-glow-blue: 0 0 25px rgba(37, 99, 235, 0.25);
+}
+
+/* Custom Clean Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-app);
+  color: var(--text-body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   TOP NAVIGATION BAR (As seen in Reference Header)
+   ========================================================================== */
+.top-navbar {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--card-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0.85rem 2rem;
+}
+
+.top-navbar-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-brand-group .brand-logo-disc {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--blue-light);
+  border: 1px solid var(--blue-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+}
+
+.nav-brand-group h1 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.2px;
+}
+
+.nav-brand-group span {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--blue-primary);
+  background: var(--blue-light);
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+/* Center Module Navigation Pills */
+.nav-module-pills {
+  display: flex;
+  background: #f1f5f9;
+  border-radius: 24px;
+  padding: 4px;
+  gap: 3px;
+}
+
+.nav-pill-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-pill-btn:hover {
+  color: var(--text-dark);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.nav-pill-btn.active {
+  background: #ffffff;
+  color: var(--blue-primary);
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Reference Header Top Right Links */
+.nav-reference-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-reference-links a {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.nav-reference-links a:hover,
+.nav-reference-links a.active-link {
+  color: var(--blue-primary);
+  font-weight: 600;
+}
+
+.header-patient-quick-select {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.header-patient-quick-select label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.header-patient-quick-select select {
+  border: none;
+  outline: none;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  background: transparent;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   MAIN DASHBOARD WORKSPACE (Replicating exact layout of Reference Image)
+   ========================================================================== */
+.main-workspace {
+  max-width: 1600px;
+  width: 100%;
+  margin: 1.5rem auto;
+  padding: 0 1.75rem 2.5rem 1.75rem;
+  flex: 1;
+}
+
+.tab-pane {
+  display: none;
+  animation: fadeIn 0.25s ease;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero Section: "General indicators of the Heart" */
+.hero-title-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.hero-main-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+/* Capsule Pill with Organ Visual Icon (Exact match to reference) */
+.organ-capsule-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #2563eb;
+  padding: 0.35rem 0.95rem 0.35rem 0.5rem;
+  border-radius: 28px;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.organ-capsule-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.organ-capsule-text {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* ==========================================================================
+   TRI-PANEL WORKSPACE GRID (Left Controls, Center 3D Organ, Right Patient)
+   ========================================================================== */
+.overview-trio-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1.8fr 1.05fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 1300px) {
+  .overview-trio-grid {
+    grid-template-columns: 1fr 1.5fr;
+  }
+  .column-patient-schedule {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 960px) {
+  .overview-trio-grid {
+    grid-template-columns: 1fr;
+  }
+  .column-patient-schedule {
+    grid-column: span 1;
+  }
+}
+
+/* White Floating Cards */
+.white-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 1.35rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--card-border);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.white-card:hover {
+  box-shadow: var(--shadow-float);
+}
+
+.card-label-small {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-light);
+  letter-spacing: 0.6px;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+/* Column 1: Left Parameters & State */
+.column-left-indicators {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Physiological Parameters Card (Temp, Sleep, BP, Pulse) */
+.physio-params-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.param-box {
+  background: var(--card-bg-subtle);
+  border: 1px solid #f1f5f9;
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.param-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.param-title {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.param-icon {
+  font-size: 0.95rem;
+  color: var(--blue-primary);
+}
+
+.param-value {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.param-unit {
+  font-size: 0.7rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* "The State Of My Heart" Metric Capsules (LVEF, EDV, ESV, CO) */
+.heart-state-capsules {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.state-capsule-item {
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.4rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.capsule-number {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--blue-primary);
+  display: block;
+  line-height: 1.1;
+}
+
+.capsule-label {
+  font-size: 0.64rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-top: 0.2rem;
+  display: block;
+}
+
+/* Modality Condition Cards (Bottom Left / Center) */
+.condition-cards-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.condition-card-row {
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 0.95rem 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.condition-card-row:hover {
+  border-color: var(--blue-border);
+  transform: translateX(3px);
+  background: #fafcff;
+}
+
+.condition-card-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.condition-thumb-disc {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background: var(--blue-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.condition-info h4 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.condition-info p {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.condition-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 16px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   COLUMN 2: CENTER 3D ANATOMICAL HEART VISUALIZER
+   ========================================================================== */
+.column-center-organ {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.organ-viewport-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.organ-viewport-header h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hotspot-guidance-pill {
+  background: var(--blue-light);
+  color: var(--blue-primary);
+  border: 1px solid var(--blue-border);
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+#heart3dCanvas {
+  width: 100%;
+  max-width: 520px;
+  height: 420px;
+  display: block;
+}
+
+.organ-hud-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #f1f5f9;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.organ-hud-footer span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.status-dot-green {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--emerald-accent);
+}
+
+/* ==========================================================================
+   COLUMN 3: RIGHT PATIENT CARD & APPOINTMENT SCHEDULE
+   ========================================================================== */
+.column-patient-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Patient Profile Card (Exact match to Reference Upper-Right Card) */
+.patient-profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.patient-header-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.patient-avatar-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  overflow: hidden;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.patient-meta-text h3 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.patient-meta-text span {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.diagnosis-tags-cluster {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.diagnosis-pill-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--card-bg-subtle);
+  border: 1px solid var(--card-border);
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-body);
+}
+
+.tag-badge-danger {
+  background: var(--red-light);
+  color: var(--red-accent);
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.tag-badge-warning {
+  background: var(--amber-light);
+  color: var(--amber-accent);
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+/* "My Schedule" Appointment Card */
+.schedule-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.schedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.schedule-header h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.schedule-calendar-strip {
+  background: var(--card-bg-subtle);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 0.65rem 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.78rem;
+}
+
+.doctor-item-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.doctor-avatar-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--blue-light);
+  border: 1px solid var(--blue-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.doctor-details h5 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.doctor-details span {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+/* Blue Primary Button (Exact match to Reference "Consult Now" CTA) */
+.btn-primary-blue {
+  width: 100%;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  transition: all 0.2s;
+}
+
+.btn-primary-blue:hover {
+  background: #1d4ed8;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   MODULE TABS 2, 3, 4, 5 (Full Dedicated Workstations in Light Theme)
+   ========================================================================== */
+.module-header-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.module-header-strip h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.5px;
+}
+
+.module-workspace-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 1100px) {
+  .module-workspace-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Preset Chips Row */
+.preset-chips-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.chip-btn {
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  color: var(--text-body);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.38rem 0.85rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.chip-btn:hover {
+  border-color: var(--blue-border);
+  color: var(--blue-primary);
+  background: var(--blue-light);
+}
+
+.chip-btn.active {
+  background: var(--blue-primary);
+  color: #ffffff;
+  border-color: var(--blue-primary);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+/* Canvas Viewport Containers (in Light Clean Slate) */
+.clean-canvas-box {
+  background: #090e1a;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#echoCanvas {
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 640 / 420;
+  height: auto;
+  display: block;
+}
+
+#oscilloscopeCanvas {
+  width: 100%;
+  aspect-ratio: 720 / 180;
+  height: auto;
+  display: block;
+}
+
+#spectrogramCanvas {
+  width: 100%;
+  aspect-ratio: 720 / 200;
+  height: auto;
+  display: block;
+}
+
+#volumeChartCanvas {
+  width: 100%;
+  aspect-ratio: 340 / 110;
+  height: auto;
+  display: block;
+}
+
+/* Clean Controls Toolbar */
+.clean-toolbar {
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.85rem;
+}
+
+.toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  color: var(--text-dark);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.15s;
+}
+
+.btn-secondary:hover {
+  background: var(--card-bg-subtle);
+  border-color: #cbd5e1;
+}
+
+.btn-secondary.active-state {
+  background: var(--red-light);
+  color: var(--red-accent);
+  border-color: var(--red-border);
+}
+
+/* Telemetry Sidebar Card */
+.telemetry-sidebar-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.hero-metric-display {
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.hero-metric-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--blue-primary);
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.sub-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.sub-metric-cell {
+  background: var(--card-bg-subtle);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem;
+}
+
+.sub-metric-cell span {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+}
+
+.sub-metric-cell strong {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+/* ==========================================================================
+   DRUG COLLISION & MATRIX (Light Clean Medical Palette)
+   ========================================================================== */
+.hazard-meters-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .hazard-meters-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hazard-meter-card {
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 0.95rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.hazard-track {
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  margin-top: 0.4rem;
+  overflow: hidden;
+}
+
+.hazard-fill {
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.hazard-fill.safe { background: var(--emerald-accent); }
+.hazard-fill.warning { background: var(--amber-accent); }
+.hazard-fill.critical { background: var(--red-accent); }
+
+/* Collision Cards */
+.collision-card {
+  background: #ffffff;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 0.85rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.collision-card.critical-alert {
+  border-left: 4px solid var(--red-accent);
+  background: #fffafa;
+}
+
+.collision-card.warning-alert {
+  border-left: 4px solid var(--amber-accent);
+  background: #fffdf7;
+}
+
+/* Interactive N x N Matrix */
+.matrix-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.75rem;
+}
+
+.matrix-table th, .matrix-table td {
+  padding: 0.6rem;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+.matrix-table th {
+  background: #f8fafc;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.matrix-table td.cell-safe {
+  background: #ecfdf5;
+  color: #059669;
+  font-weight: 800;
+}
+
+.matrix-table td.cell-moderate {
+  background: #fef3c7;
+  color: #d97706;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.matrix-table td.cell-major {
+  background: #fed7aa;
+  color: #c2410c;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.matrix-table td.cell-contraindicated {
+  background: #fecaca;
+  color: #b91c1c;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   UNIFIED CLINICAL REPORT SHEET
+   ========================================================================== */
+.report-sheet-outer {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.clinical-report-sheet {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-float);
+  border: 1px solid var(--card-border);
+}
+
+/* ==========================================================================
+   TOAST NOTIFICATION
+   ========================================================================== */
+.cardio-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #1e293b;
+  color: #ffffff;
+  padding: 0.85rem 1.35rem;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 999;
+}
+
+.cardio-toast.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Print Rules */
+@media print {
+  body {
+    background: #ffffff !important;
+  }
+  .top-navbar,
+  .nav-module-pills,
+  .report-action-toolbar,
+  .tab-pane:not(#tab-report) {
+    display: none !important;
+  }
+  .tab-pane#tab-report {
+    display: block !important;
+  }
+  .clinical-report-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+}
