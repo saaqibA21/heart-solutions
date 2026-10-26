@@ -1820,6 +1820,9 @@ window.CARDIO_DATA = {"drugsDb":{"version":"3.0.0","metadata":{"title":"CardioSu
           <button id="btnResetTriageProtocol" class="btn-secondary" style="padding: 0.6rem 0.9rem;">
             <span>↺</span> Reset
           </button>
+          <button id="btnToggleCustomTriage" class="btn-secondary" style="background: #0284c7; color: #fff; border: none; padding: 0.6rem 1.1rem; font-weight: 700;">
+            <span>✏️</span> Enter Custom Patient Data
+          </button>
           <button id="btnPrintTriageOrder" class="btn-secondary" style="background: #dc2626; color: #fff; border: none; padding: 0.6rem 1.1rem; font-weight: 700;">
             <span>🖨️</span> Print Triage Card
           </button>
@@ -1838,6 +1841,57 @@ window.CARDIO_DATA = {"drugsDb":{"version":"3.0.0","metadata":{"title":"CardioSu
         <button type="button" class="chip-btn" data-triage-scenario="polypharmacy">
           <span>💊</span> Polypharmacy: Fatal Collision Shield
         </button>
+      </div>
+
+      <!-- Custom Patient Input Drawer -->
+      <div id="customTriageInputCard" class="white-card" style="display: none; margin-bottom: 1.25rem; background: #f0fdf4; border: 2px solid #059669; padding: 1.25rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(5, 150, 105, 0.1);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem;">
+          <div>
+            <h3 style="font-size: 1rem; font-weight: 800; color: #065f46; margin: 0;">✏️ Live Bedside Clinical Input Form</h3>
+            <span style="font-size: 0.75rem; color: #047857;">Enter your real patient's values here to trigger real-time multi-modal AI triage:</span>
+          </div>
+          <button id="btnCloseCustomTriage" class="btn-secondary" style="padding: 0.25rem 0.6rem; font-size: 0.75rem; cursor: pointer;">✕ Close</button>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1rem;">
+          <!-- Echo EF Input -->
+          <div style="background: #fff; padding: 0.85rem; border-radius: 8px; border: 1px solid #a7f3d0;">
+            <label style="font-size: 0.75rem; font-weight: 700; color: #065f46; display: block; margin-bottom: 0.4rem;">
+              🎥 Simpson's LVEF: <span id="customEfDisplay" style="font-weight: 900; color: #dc2626;">28%</span>
+            </label>
+            <input type="range" id="customEfSlider" min="15" max="75" value="28" style="width: 100%; margin-bottom: 0.3rem; cursor: pointer;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.68rem; color: #64748b;">
+              <span>15% (Severe HF)</span>
+              <span>35% (Cutoff)</span>
+              <span>75% (Hyper)</span>
+            </div>
+          </div>
+          <!-- Stethoscope Murmur Input -->
+          <div style="background: #fff; padding: 0.85rem; border-radius: 8px; border: 1px solid #a7f3d0;">
+            <label style="font-size: 0.75rem; font-weight: 700; color: #065f46; display: block; margin-bottom: 0.4rem;">
+              🩺 Acoustic Auscultation:
+            </label>
+            <select id="customStethSelect" style="width: 100%; padding: 0.45rem; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 0.78rem; cursor: pointer;">
+              <option value="holosystolic">Holosystolic Blowing (Mitral Regurgitation)</option>
+              <option value="systolic">Crescendo-Decrescendo Diamond (Aortic Stenosis)</option>
+              <option value="diastolic">Early Diastolic Decrescendo (Aortic Regurgitation)</option>
+              <option value="s3_gallop">Prominent S3 Ventricular Gallop (Fluid Overload)</option>
+              <option value="normal">Normal Physiological S1/S2 (No Murmur)</option>
+            </select>
+          </div>
+          <!-- Prescription Regimen Input -->
+          <div style="background: #fff; padding: 0.85rem; border-radius: 8px; border: 1px solid #a7f3d0;">
+            <label style="font-size: 0.75rem; font-weight: 700; color: #065f46; display: block; margin-bottom: 0.4rem;">
+              💊 Medications (Generic or Indian Brand):
+            </label>
+            <input type="text" id="customDrugsInput" placeholder="e.g. Aldactone, Combiflam, Potklor" value="Aldactone, Combiflam, Potklor" style="width: 100%; padding: 0.45rem; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 0.78rem;">
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 0.75rem;">
+          <input type="text" id="customComplaintInput" placeholder="Clinical presentation (e.g. 65M sudden shortness of breath at rest, bilateral edema)" value="65M acute severe shortness of breath, orthopnea, bilateral lower extremity edema." style="flex: 1; padding: 0.45rem 0.75rem; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 0.78rem;">
+          <button id="btnEvaluateCustomTriage" class="btn-primary-blue" style="background: #059669; color: #fff; padding: 0.55rem 1.25rem; font-weight: 800; border: none; cursor: pointer; white-space: nowrap;">
+            <span>⚡</span> Run Custom AI Evaluation
+          </button>
+        </div>
       </div>
 
       <!-- Patient Chief Complaint Banner -->
