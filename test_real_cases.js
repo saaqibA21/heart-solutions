@@ -152,9 +152,9 @@ async function runClinicalVerificationSuite() {
 
     if (echoRes.status === 200 && efValid && classValid) {
       passedTests++;
-      console.log(`  ✓ Echo EF Analyzer:       PASSED | EF: ${echoRes.data.lvef}% -> ${echoRes.data.classification} (Target: ${c.expected.echoClassification})`);
+      console.log(`   Echo EF Analyzer:       PASSED | EF: ${echoRes.data.lvef}% -> ${echoRes.data.classification} (Target: ${c.expected.echoClassification})`);
     } else {
-      console.log(`  ✕ Echo EF Analyzer:       FAILED | Got: ${echoRes.data.lvef}% (${echoRes.data.classification}), Expected: ${c.expected.echoClassification}`);
+      console.log(`   Echo EF Analyzer:       FAILED | Got: ${echoRes.data.lvef}% (${echoRes.data.classification}), Expected: ${c.expected.echoClassification}`);
     }
 
     // 2. Test Stethoscope AI Murmur Inference
@@ -165,9 +165,9 @@ async function runClinicalVerificationSuite() {
 
     if (stethRes.status === 200 && murmurMatch && urgencyMatch) {
       passedTests++;
-      console.log(`  ✓ Stethoscope Murmur AI:  PASSED | Condition: ${stethRes.data.condition} (${stethRes.data.murmurGrade}) | Urgency: ${stethRes.data.urgency}`);
+      console.log(`   Stethoscope Murmur AI:  PASSED | Condition: ${stethRes.data.condition} (${stethRes.data.murmurGrade}) | Urgency: ${stethRes.data.urgency}`);
     } else {
-      console.log(`  ✕ Stethoscope Murmur AI:  FAILED | Got: ${stethRes.data.condition} (${stethRes.data.urgency}), Expected: ${c.expected.murmurCondition}`);
+      console.log(`   Stethoscope Murmur AI:  FAILED | Got: ${stethRes.data.condition} (${stethRes.data.urgency}), Expected: ${c.expected.murmurCondition}`);
     }
 
     // 3. Test Drug Collision Safety Guardrail
@@ -178,14 +178,14 @@ async function runClinicalVerificationSuite() {
 
     if (collisionRes.status === 200 && collisionValid) {
       passedTests++;
-      console.log(`  ✓ Drug Collision Engine:  PASSED | Active Collisions: ${collisionRes.data.totalCount || 0} | Hazard Scores: QT=${collisionRes.data.hazardScores?.qtProlongation || 0}, Bleed=${collisionRes.data.hazardScores?.bleedingRisk || 0}, HyperK=${collisionRes.data.hazardScores?.hyperkalemia || 0}`);
+      console.log(`   Drug Collision Engine:  PASSED | Active Collisions: ${collisionRes.data.totalCount || 0} | Hazard Scores: QT=${collisionRes.data.hazardScores?.qtProlongation || 0}, Bleed=${collisionRes.data.hazardScores?.bleedingRisk || 0}, HyperK=${collisionRes.data.hazardScores?.hyperkalemia || 0}`);
       if (hasCollisions) {
         collisionRes.data.collisions.slice(0, 2).forEach(col => {
           console.log(`     -> Flagged: [${col.severity}] ${col.primary_hazard}`);
         });
       }
     } else {
-      console.log(`  ✕ Drug Collision Engine:  FAILED | Expected critical collisions: ${c.expected.criticalCollisionsExpected}, Got: ${collisionRes.data.totalCount}`);
+      console.log(`   Drug Collision Engine:  FAILED | Expected critical collisions: ${c.expected.criticalCollisionsExpected}, Got: ${collisionRes.data.totalCount}`);
     }
 
     // 4. Test Live US FDA FAERS API Query for Case with Collisions
@@ -196,9 +196,9 @@ async function runClinicalVerificationSuite() {
       const fdaRes = await get(`/api/fda/adverse-events?drug1=${encodeURIComponent(d1)}&drug2=${encodeURIComponent(d2)}`);
       if (fdaRes.status === 200) {
         passedTests++;
-        console.log(`  ✓ US FDA FAERS Live API:  PASSED | Queried ${d1} + ${d2} -> Reports Found: ${fdaRes.data.total_reports_found || 0} (Source: ${fdaRes.data.source})`);
+        console.log(`   US FDA FAERS Live API:  PASSED | Queried ${d1} + ${d2} -> Reports Found: ${fdaRes.data.total_reports_found || 0} (Source: ${fdaRes.data.source})`);
       } else {
-        console.log(`  ✕ US FDA FAERS Live API:  FAILED | Status: ${fdaRes.status}`);
+        console.log(`   US FDA FAERS Live API:  FAILED | Status: ${fdaRes.status}`);
       }
     }
 
@@ -210,9 +210,9 @@ async function runClinicalVerificationSuite() {
   const patientsRes = await get('/api/patients');
   if (patientsRes.status === 200 && patientsRes.data.cases && patientsRes.data.cases.length === 4) {
     passedTests++;
-    console.log(`✓ HL7 FHIR Patient Registry: PASSED | Verified 4 gold-standard clinical cases loaded.`);
+    console.log(` HL7 FHIR Patient Registry: PASSED | Verified 4 gold-standard clinical cases loaded.`);
   } else {
-    console.log(`✕ HL7 FHIR Patient Registry: FAILED`);
+    console.log(` HL7 FHIR Patient Registry: FAILED`);
   }
 
   // Summary

@@ -309,7 +309,7 @@ class CardioSuiteApp {
     if (echoPlayBtn) {
       echoPlayBtn.addEventListener('click', () => {
         const isPlaying = this.echoAnalyzer.togglePlay();
-        echoPlayBtn.innerHTML = isPlaying ? '<span>⏸</span> Pause' : '<span>▶</span> Play';
+        echoPlayBtn.innerHTML = isPlaying ? '<span></span> Pause' : '<span>▶</span> Play';
       });
     }
 
@@ -371,7 +371,7 @@ class CardioSuiteApp {
           audioPlayBtn.classList.remove('btn-active');
         } else {
           this.stethoscopeAI.playPreset();
-          audioPlayBtn.innerHTML = '<span>⏸</span> Stop Sound';
+          audioPlayBtn.innerHTML = '<span></span> Stop Sound';
           audioPlayBtn.classList.add('btn-active');
         }
       });
@@ -397,15 +397,15 @@ class CardioSuiteApp {
     if (bleBtn) {
       bleBtn.addEventListener('click', async () => {
         bleBtn.disabled = true;
-        bleBtn.innerHTML = '<span>⏳</span> Connecting BLE...';
+        bleBtn.innerHTML = '<span></span> Connecting BLE...';
         const ok = await this.stethoscopeAI.connectBluetoothStethoscope();
         bleBtn.disabled = false;
         if (ok) {
-          bleBtn.innerHTML = '<span>📶</span> BLE Connected';
+          bleBtn.innerHTML = 'BLE Connected';
           bleBtn.classList.add('btn-active');
           this.showToast("Connected to digital Bluetooth stethoscope!");
         } else {
-          bleBtn.innerHTML = '<span>📶</span> Connect BLE Stethoscope';
+          bleBtn.innerHTML = 'Connect BLE Stethoscope';
           bleBtn.classList.remove('btn-active');
         }
       });
@@ -417,12 +417,12 @@ class CardioSuiteApp {
         if (this.stethoscopeAI.isMicActive) {
           this.stethoscopeAI.stop();
           micBtn.classList.remove('btn-active');
-          micBtn.innerHTML = '<span>🎙</span> Test Live Mic';
+          micBtn.innerHTML = 'Test Live Mic';
         } else {
           const success = await this.stethoscopeAI.startMicrophone();
           if (success) {
             micBtn.classList.add('btn-active');
-            micBtn.innerHTML = '<span>⏹</span> Stop Live Mic';
+            micBtn.innerHTML = '<span></span> Stop Live Mic';
             this.showToast("Live Stethoscope Microphone active with 25-400Hz filter.");
           }
         }
@@ -485,7 +485,7 @@ class CardioSuiteApp {
     if (fdaBtn) {
       fdaBtn.addEventListener('click', async () => {
         fdaBtn.disabled = true;
-        fdaBtn.innerHTML = '<span>🏛️</span> Querying US FDA FAERS...';
+        fdaBtn.innerHTML = 'Querying US FDA FAERS...';
         try {
           const activeDrugs = this.drugEngine.patientMedications;
           const d1 = activeDrugs[0]?.name || 'Amiodarone';
@@ -493,7 +493,7 @@ class CardioSuiteApp {
           const resp = await fetch(`/api/fda/adverse-events?drug1=${encodeURIComponent(d1)}&drug2=${encodeURIComponent(d2)}`);
           const data = await resp.json();
           fdaBtn.disabled = false;
-          fdaBtn.innerHTML = '<span>🏛️</span> US FDA FAERS Verified';
+          fdaBtn.innerHTML = 'US FDA FAERS Verified';
           if (data.found) {
             this.showToast(`US FDA FAERS: ${data.total_reports_found} real hospital adverse collision reports on record for ${d1} + ${d2}!`);
           } else {
@@ -501,7 +501,7 @@ class CardioSuiteApp {
           }
         } catch (e) {
           fdaBtn.disabled = false;
-          fdaBtn.innerHTML = '<span>🏛️</span> Verify FDA FAERS Live';
+          fdaBtn.innerHTML = 'Verify FDA FAERS Live';
         }
       });
     }
@@ -877,7 +877,7 @@ class CardioSuiteApp {
       if (activeCollisions.length === 0) {
         colContainer.innerHTML = `
           <div class="clean-pass-card">
-            <span class="pass-icon">🛡️</span>
+            <span class="pass-icon"></span>
             <div>
               <h4>Zero Dangerous Drug Collisions Detected</h4>
               <p>Active regimen exhibits no major QT prolongation synergisms, bleeding contraindications, or severe hyperkalemia conflicts.</p>
@@ -891,7 +891,7 @@ class CardioSuiteApp {
           card.innerHTML = `
             <div class="col-card-header">
               <div class="col-title-group">
-                <span class="col-icon">⚠️</span>
+                <span class="col-icon"></span>
                 <h4>${col.drug1Name} ↔ ${col.drug2Name}</h4>
               </div>
               <span class="badge ${col.severity === 'Contraindicated' ? 'badge-critical' : 'badge-warning'}">${col.severity}</span>
@@ -951,7 +951,7 @@ class CardioSuiteApp {
       html += `<tr><th title="${row.drug.name}">${row.drug.name.substring(0, 10)}..</th>`;
       row.cells.forEach((cell, colIdx) => {
         let cellClass = 'cell-safe';
-        let cellChar = '✓';
+        let cellChar = '';
         let tip = 'Safe combination';
 
         if (cell.status === 'self') {
@@ -960,7 +960,7 @@ class CardioSuiteApp {
           tip = 'Same drug';
         } else if (cell.status === 'contraindicated') {
           cellClass = 'cell-contraindicated';
-          cellChar = '✕';
+          cellChar = '';
           tip = `CONTRAINDICATED: ${cell.collision.primary_hazard}`;
         } else if (cell.status === 'major') {
           cellClass = 'cell-major';
@@ -1162,7 +1162,7 @@ class CardioSuiteApp {
 
       let outputHtml = `
         <div class="ocr-success-banner">
-          <h4>✓ Extracted ${res.scannedCount} Cardiac Drug Entities</h4>
+          <h4> Extracted ${res.scannedCount} Cardiac Drug Entities</h4>
           <p>Confidence: 99.6% validated accuracy across clinical handwriting model.</p>
         </div>
         <div class="ocr-entities-list">

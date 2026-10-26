@@ -207,7 +207,7 @@ class CardiacReportGenerator {
                   </div>
                   <p class="col-mech">${c.mechanism}</p>
                 </div>
-              `).join('') : '<div class="clean-pass-msg">✓ No dangerous pharmacovigilance collisions detected.</div>'}
+              `).join('') : '<div class="clean-pass-msg"> No dangerous pharmacovigilance collisions detected.</div>'}
             </div>
           </div>
         </div>
@@ -258,7 +258,7 @@ class CardiacReportGenerator {
           </div>
           <div class="auth-col text-right">
             <div class="cert-stamp">
-              <span class="stamp-icon">✓</span>
+              <span class="stamp-icon"></span>
               <span>CARDIOSUITE AI VERIFIED</span>
             </div>
             <p class="crypto-hash">Audit Hash: ${Math.random().toString(36).substring(2, 15).toUpperCase()}-${Math.random().toString(36).substring(2, 15).toUpperCase()}</p>

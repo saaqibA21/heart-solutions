@@ -20,7 +20,7 @@ class BedsideTriageEngine {
       dyspnea: {
         id: 'dyspnea',
         title: 'Acute Dyspnea Crisis: Heart Failure vs. COPD / Pneumonia',
-        icon: '🚨',
+        
         chiefComplaint: '67M severe progressive shortness of breath, orthopnea, bilateral leg edema.',
         caseIndex: 0, // Robert Chen (HFrEF)
         echoStatus: {
@@ -52,8 +52,8 @@ class BedsideTriageEngine {
           'Titrate Sublingual / IV Nitroglycerin if SBP > 110 mmHg to reduce left ventricular afterload.'
         ],
         deadlyContraindications: [
-          '🛑 DO NOT ADMINISTER IV FLUID BOLUS (Will precipitate alveolar flooding and asphyxiation).',
-          '🛑 DO NOT ADMINISTER BETA-BLOCKER ESCALATION during acute uncompensated pulmonary edema.'
+          'CONTRAINDICATION: DO NOT ADMINISTER IV FLUID BOLUS (Will precipitate alveolar flooding and asphyxiation).',
+          'CONTRAINDICATION: DO NOT ADMINISTER BETA-BLOCKER ESCALATION during acute uncompensated pulmonary edema.'
         ],
         drugInterventions: [
           'IMMEDIATELY HOLD: Spironolactone & Potassium Chloride (K+ already 5.8 mEq/L; eGFR 48).',
@@ -64,7 +64,7 @@ class BedsideTriageEngine {
       murmur: {
         id: 'murmur',
         title: 'Primary Care Silent Murmur Screen (Early Valve Disease)',
-        icon: '🩺',
+        
         chiefComplaint: '74F routine annual exam with mild exertional fatigue; no overt edema.',
         caseIndex: 1, // Eleanor Vance (Aortic Stenosis)
         echoStatus: {
@@ -95,8 +95,8 @@ class BedsideTriageEngine {
           'Schedule baseline outpatient ambulatory Holter monitoring for asymptomatic paroxysmal AFib.'
         ],
         deadlyContraindications: [
-          '🛑 AVOID AGGRESSIVE HIGH-DOSE VASODILATORS / NITRATES (Risk of catastrophic orthostatic syncope).',
-          '🛑 DO NOT PERFORM STRESS TREADMILL TESTING in symptomatic severe aortic stenosis.'
+          'CONTRAINDICATION: AVOID AGGRESSIVE HIGH-DOSE VASODILATORS / NITRATES (Risk of catastrophic orthostatic syncope).',
+          'CONTRAINDICATION: DO NOT PERFORM STRESS TREADMILL TESTING in symptomatic severe aortic stenosis.'
         ],
         drugInterventions: [
           'CANCEL Clarithromycin immediately. Prescribe Amoxicillin/Clavulanate or Ceftriaxone.',
@@ -107,7 +107,7 @@ class BedsideTriageEngine {
       polypharmacy: {
         id: 'polypharmacy',
         title: 'Polypharmacy Collision Shield (Fatal Arrhythmia Prevention)',
-        icon: '💊',
+        
         chiefComplaint: '58M with paroxysmal AFib taking multi-agent regimen presenting with palpitations.',
         caseIndex: 2, // Marcus Thorne (QT Prolongation / Amiodarone + Azithromycin + Citalopram)
         echoStatus: {
@@ -138,8 +138,8 @@ class BedsideTriageEngine {
           'Check and recheck serum Potassium and Magnesium levels (target K+ > 4.5, Mg > 2.0 mEq/L).'
         ],
         deadlyContraindications: [
-          '🛑 ABSOLUTELY DO NOT DISPENSE AZITHROMYCIN (Documented CredibleMeds Known Risk List 1).',
-          '🛑 DO NOT DISPENSE CITALOPRAM WITH AMIODARONE in patients with QTc > 500 ms.'
+          'CONTRAINDICATION: ABSOLUTELY DO NOT DISPENSE AZITHROMYCIN (Documented CredibleMeds Known Risk List 1).',
+          'CONTRAINDICATION: DO NOT DISPENSE CITALOPRAM WITH AMIODARONE in patients with QTc > 500 ms.'
         ],
         drugInterventions: [
           'REPLACE Azithromycin with oral Doxycycline 100 mg BID (zero QTc prolongation hazard).',
@@ -217,7 +217,7 @@ class BedsideTriageEngine {
       toggleBtn.addEventListener('click', () => {
         const isHidden = drawer.style.display === 'none';
         drawer.style.display = isHidden ? 'block' : 'none';
-        toggleBtn.innerHTML = isHidden ? '<span>✕</span> Hide Custom Form' : '<span>✏️</span> Enter Custom Patient Data';
+        toggleBtn.innerHTML = isHidden ? '<span></span> Hide Custom Form' : 'Enter Custom Patient Data';
         if (isHidden) drawer.scrollIntoView({ behavior: 'smooth' });
       });
     }
@@ -225,7 +225,7 @@ class BedsideTriageEngine {
     if (closeBtn && drawer && toggleBtn) {
       closeBtn.addEventListener('click', () => {
         drawer.style.display = 'none';
-        toggleBtn.innerHTML = '<span>✏️</span> Enter Custom Patient Data';
+        toggleBtn.innerHTML = 'Enter Custom Patient Data';
       });
     }
 
@@ -360,10 +360,10 @@ class BedsideTriageEngine {
         'Obtain 12-lead ECG and chest radiograph.'
       ],
       deadlyContraindications: isFailing ? [
-        '🛑 DO NOT ADMINISTER IV FLUID BOLUS (Lethal in failing pump EF < 35%; causes alveolar drowning).',
-        '🛑 DO NOT ESCALATE BETA BLOCKERS during acute uncompensated pulmonary congestion.'
+        'CONTRAINDICATION: DO NOT ADMINISTER IV FLUID BOLUS (Lethal in failing pump EF < 35%; causes alveolar drowning).',
+        'CONTRAINDICATION: DO NOT ESCALATE BETA BLOCKERS during acute uncompensated pulmonary congestion.'
       ] : [
-        '🛑 AVOID unnecessary aggressive high-dose loop diuretics if patient has normal EF and dry lungs (risks prerenal azotemia).'
+        'CONTRAINDICATION: AVOID unnecessary aggressive high-dose loop diuretics if patient has normal EF and dry lungs (risks prerenal azotemia).'
       ],
       drugInterventions: (collisionInfo.totalCount > 0 || drugCollisionText.includes('+')) ? [
         `IMMEDIATELY WITHHOLD: ${drugCollisionText}.`,
@@ -455,7 +455,7 @@ class BedsideTriageEngine {
     // Populate Directive Lists
     const actList = document.getElementById('triageImmediateActionsList');
     if (actList) {
-      actList.innerHTML = s.immediateActions.map(a => `<li style="margin-bottom: 0.35rem; color: #166534; font-weight: 600;">✓ ${a}</li>`).join('');
+      actList.innerHTML = s.immediateActions.map(a => `<li style="margin-bottom: 0.35rem; color: #166534; font-weight: 600;"> ${a}</li>`).join('');
     }
 
     const contraList = document.getElementById('triageContraindicationsList');
@@ -473,7 +473,7 @@ class BedsideTriageEngine {
     this.isRunning = true;
     const runBtn = document.getElementById('btnStartTriageProtocol');
     if (runBtn) {
-      runBtn.innerHTML = '<span>⏸</span> Pause Protocol';
+      runBtn.innerHTML = '<span></span> Pause Protocol';
       runBtn.style.background = '#eab308';
     }
 
@@ -496,7 +496,7 @@ class BedsideTriageEngine {
     this.intervalId = null;
     const runBtn = document.getElementById('btnStartTriageProtocol');
     if (runBtn) {
-      runBtn.innerHTML = '<span>⚡</span> Resume Protocol';
+      runBtn.innerHTML = 'Resume Protocol';
       runBtn.style.background = '#2563eb';
     }
   }
@@ -507,7 +507,7 @@ class BedsideTriageEngine {
     this.updateTimerDisplay();
     const runBtn = document.getElementById('btnStartTriageProtocol');
     if (runBtn) {
-      runBtn.innerHTML = '<span>⚡</span> Run 60-Second Protocol';
+      runBtn.innerHTML = 'Run 60-Second Protocol';
       runBtn.style.background = '#2563eb';
     }
   }
@@ -551,7 +551,7 @@ class BedsideTriageEngine {
       <body>
         <div class="header">
           <div>
-            <div class="title">🫀 CARDIOSUITE AI — EMERGENCY BEDSIDE TRIAGE CARD</div>
+            <div class="title">CARDIOSUITE AI — EMERGENCY BEDSIDE TRIAGE CARD</div>
             <div style="font-size: 12px; color: #475569;">Multi-Modal Point-of-Care Cardiac Decision Support | Calibrated Fused Confidence: 99.6%</div>
           </div>
           <span class="badge">${s.triageBadge}</span>
@@ -563,17 +563,17 @@ class BedsideTriageEngine {
         </div>
 
         <div class="box success-box">
-          <h3 style="color: #166534;">✓ Immediate 60-Second Interventions</h3>
+          <h3 style="color: #166534;"> Immediate 60-Second Interventions</h3>
           <ul>${s.immediateActions.map(a => `<li>${a}</li>`).join('')}</ul>
         </div>
 
         <div class="box danger-box">
-          <h3 style="color: #991b1b;">🛑 Critical Emergency Contraindications</h3>
+          <h3 style="color: #991b1b;"> Critical Emergency Contraindications</h3>
           <ul>${s.deadlyContraindications.map(c => `<li>${c}</li>`).join('')}</ul>
         </div>
 
         <div class="box blue-box">
-          <h3 style="color: #1e40af;">💊 Pharmacotherapy Adjustments & Substitutions</h3>
+          <h3 style="color: #1e40af;"> Pharmacotherapy Adjustments & Substitutions</h3>
           <ul>${s.drugInterventions.map(d => `<li>${d}</li>`).join('')}</ul>
         </div>
 
