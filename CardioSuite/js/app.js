@@ -130,6 +130,7 @@ class CardioSuiteApp {
     this.reportGenerator = null;
     this.heart3d = null;
     this.realtimeBus = null;
+    this.triageEngine = null;
 
     // Cached state
     this.currentEchoMetrics = null;
@@ -145,6 +146,10 @@ class CardioSuiteApp {
     this.stethoscopeAI = new StethoscopeAI('oscilloscopeCanvas', 'spectrogramCanvas');
     this.drugEngine = new DrugCollisionSafetyEngine();
     this.reportGenerator = new CardiacReportGenerator();
+    if (typeof BedsideTriageEngine !== 'undefined') {
+      this.triageEngine = new BedsideTriageEngine(this);
+      this.triageEngine.init();
+    }
     this.realtimeBus = new RealtimeBus();
     this.realtimeBus.on('DRUG_COLLISION_UPDATE', (data) => {
       console.log('[RealtimeBus] Remote collision sync event received:', data);
@@ -615,7 +620,7 @@ class CardioSuiteApp {
     this.activeTab = tabName;
 
     // Update Nav Buttons
-    document.querySelectorAll('.nav-tab-btn').forEach(btn => {
+    document.querySelectorAll('.nav-tab-btn, .nav-pill-btn').forEach(btn => {
       if (btn.getAttribute('data-tab') === tabName) btn.classList.add('active');
       else btn.classList.remove('active');
     });
