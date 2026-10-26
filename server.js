@@ -359,8 +359,9 @@ app.post('/api/ai/echo', (req, res) => {
     recommendation = 'Severely reduced EF. Urgent HF team referral. Consider advanced HF therapies (LVAD/transplant listing).';
   }
 
+  const strokeVolume = (edv !== undefined && esv !== undefined) ? Math.round(edv - esv) : undefined;
   const result = {
-    lvef, edv, esv, cardiacOutput,
+    lvef, edv, esv, strokeVolume, cardiacOutput,
     classification, severity, classBadge, recommendation,
     accuracy: 99.6,
     model: 'CardioSuite-EchoNet v3.0 (Simpson\'s Biplane 20-Disc)',

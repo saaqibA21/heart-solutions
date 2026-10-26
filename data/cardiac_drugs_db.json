@@ -225,7 +225,9 @@
       "brand_names": [
         "Bayer",
         "Ecotrin",
-        "Empirin"
+        "Empirin",
+        "Ecosprin",
+        "Disprin"
       ],
       "class": "Antiplatelet / Irreversible COX-1 Inhibitor",
       "category": "Antiplatelets",
@@ -348,7 +350,10 @@
       "id": "metoprolol_succinate",
       "name": "Metoprolol Succinate",
       "brand_names": [
-        "Toprol-XL"
+        "Toprol-XL",
+        "Betaloc",
+        "Metolar",
+        "Ciplar-LA"
       ],
       "class": "Cardioselective Beta-1 Blocker (Extended Release)",
       "category": "Beta Blockers",
@@ -768,7 +773,10 @@
       "name": "Ibuprofen",
       "brand_names": [
         "Advil",
-        "Motrin"
+        "Motrin",
+        "Combiflam",
+        "Brufen",
+        "Ibugesic"
       ],
       "class": "Nonsteroidal Anti-inflammatory Drug (NSAID)",
       "category": "Colliding NSAIDs",
@@ -897,7 +905,9 @@
       "brand_names": [
         "K-Dur",
         "Klor-Con",
-        "Micro-K"
+        "Micro-K",
+        "Potklor",
+        "K-Lyte"
       ],
       "class": "Electrolyte Supplement",
       "category": "Diuretics & MRAs",
@@ -1233,7 +1243,9 @@
       "id": "ramipril",
       "name": "Ramipril",
       "brand_names": [
-        "Altace"
+        "Altace",
+        "Cardace",
+        "Hopace"
       ],
       "class": "ACE Inhibitor",
       "category": "Heart Failure & RAAS Blockers",
@@ -1360,7 +1372,8 @@
       "id": "torsemide",
       "name": "Torsemide",
       "brand_names": [
-        "Demadex"
+        "Demadex",
+        "Dytor"
       ],
       "class": "Loop Diuretic",
       "category": "Diuretics & MRAs",
@@ -1685,6 +1698,42 @@
       },
       "rxcui": "6585",
       "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Magnesium%20Sulfate"
+    },
+    {
+      "id": "telmisartan",
+      "name": "Telmisartan",
+      "brand_names": [
+        "Micardis",
+        "Telma",
+        "Telmikind",
+        "Cresar",
+        "Telpres"
+      ],
+      "class": "Angiotensin II Receptor Blocker (ARB)",
+      "category": "Heart Failure & RAAS Blockers",
+      "common_dosages": [
+        "20 mg",
+        "40 mg",
+        "80 mg daily"
+      ],
+      "indications": [
+        "Hypertension",
+        "Cardiovascular risk reduction in diabetic/coronary artery disease",
+        "HFrEF ACEi-intolerant"
+      ],
+      "risk_profile": {
+        "qt_prolongation": "None",
+        "bleeding": "None",
+        "hyperkalemia": "High",
+        "bradycardia": "None"
+      },
+      "pharmacokinetics": {
+        "half_life": "24 hours",
+        "metabolism": "Hepatic conjugation (UGT1A3), minimal renal clearance",
+        "narrow_therapeutic_index": false
+      },
+      "rxcui": "316335",
+      "nlm_link": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=Telmisartan"
     }
   ],
   "collisions": [
@@ -2071,6 +2120,52 @@
         "Instruct patient on daily weight and blood pressure monitoring."
       ],
       "regulatory_alert": "EMPEROR-Reduced Clinical Protocol Monitoring Guideline"
+    },
+    {
+      "id": "COL-027",
+      "drug1": "spironolactone",
+      "drug2": "ibuprofen",
+      "primary_hazard": "Acute Renal Failure & Hyperkalemic Decompensation",
+      "severity": "Major",
+      "hyperkalemia_score": 4,
+      "mechanism": "NSAIDs inhibit renal vasodilatory prostaglandins (PGE2/PGI2), constricting afferent arterioles and decreasing GFR. Combined with Spironolactone aldosterone receptor antagonism, renal potassium clearance is blunted, precipitating acute cardiorenal decompensation.",
+      "clinical_manifestation": "Rapid serum potassium elevation (>6.0 mEq/L), acute oliguria, edema exacerbation, blunting of loop diuretic response.",
+      "safer_alternatives": [
+        "Strictly avoid OTC NSAIDs (Ibuprofen, Diclofenac, Combiflam) in heart failure patients on MRAs.",
+        "Use topical analgesics or low-dose acetaminophen (Paracetamol) up to 2 g/day.",
+        "If inflammatory analgesia is unavoidable, perform serial serum potassium & creatinine checks within 48-72 hours."
+      ],
+      "regulatory_alert": "Black Box Warning: Severe Nephrotoxicity & Hyperkalemia Hazard"
+    },
+    {
+      "id": "COL-028",
+      "drug1": "telmisartan",
+      "drug2": "spironolactone",
+      "primary_hazard": "Electrolyte Shock / Severe Hyperkalemia",
+      "severity": "Major",
+      "hyperkalemia_score": 4,
+      "mechanism": "Dual blockade of RAAS (Telmisartan blocks AT1 receptor; Spironolactone blocks mineralocorticoid receptor). Impairs distal potassium excretion.",
+      "clinical_manifestation": "Serum K+ > 5.5 - 6.5 mEq/L, peaked T waves, risk of cardiac arrest in elderly or CKD stage 3b+ patients.",
+      "safer_alternatives": [
+        "Monitor serum creatinine & K+ at baseline, 1 week, and 4 weeks.",
+        "Ensure eGFR > 30 mL/min. Do not exceed Spironolactone 25 mg daily without nephrology co-management."
+      ],
+      "regulatory_alert": "ACC/AHA Class III Harm Warning without strict electrolyte monitoring"
+    },
+    {
+      "id": "COL-029",
+      "drug1": "telmisartan",
+      "drug2": "ibuprofen",
+      "primary_hazard": "Acute Renal Failure & Loss of Antihypertensive Efficacy",
+      "severity": "Major",
+      "hyperkalemia_score": 3,
+      "mechanism": "NSAIDs blunt prostaglandin-mediated afferent arteriolar dilation while ARB blunts angiotensin II-mediated efferent arteriolar constriction, causing trans-glomerular pressure collapse and acute tubular necrosis.",
+      "clinical_manifestation": "Acute Kidney Injury (AKI), fluid retention, loss of blood pressure control.",
+      "safer_alternatives": [
+        "Discontinue NSAID; substitute Paracetamol.",
+        "Monitor renal function and fluid status."
+      ],
+      "regulatory_alert": "FDA Warning: Concomitant ARB + NSAID triples acute kidney injury rate"
     }
   ]
 }
