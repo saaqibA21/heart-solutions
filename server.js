@@ -384,15 +384,24 @@ app.post('/api/ai/stethoscope', (req, res) => {
   if (!rms || rms < 0.001) {
     condition = 'Silence / No Signal'; urgency = 'Routine'; murmurGrade = 'Grade 0/6';
     referral = 'No audio signal detected. Check stethoscope connection.';
-  } else if (timing === 'holosystolic' || (spectralCentroid > 200 && spectralCentroid < 450)) {
-    condition = 'Mitral Regurgitation'; murmurGrade = 'Grade 3/6'; urgency = 'Urgent';
-    referral = 'Holosystolic blowing murmur detected. Schedule urgent TTE for regurgitant volume quantification.';
-  } else if (timing === 'systolic' || (peakFrequency > 100 && peakFrequency < 360)) {
+  } else if (timing === 'systolic') {
     condition = 'Aortic Stenosis'; murmurGrade = 'Grade 4/6'; urgency = 'Emergency / Critical';
     referral = 'Harsh crescendo-decrescendo ejection murmur. Urgent Heart Valve Team referral for TAVI/surgical AVR evaluation.';
-  } else if (timing === 'diastolic' || (peakFrequency > 180 && peakFrequency < 480)) {
+  } else if (timing === 'diastolic') {
     condition = 'Aortic Regurgitation'; murmurGrade = 'Grade 2/6'; urgency = 'Urgent';
     referral = 'Early diastolic decrescendo murmur at Erb\'s point. Echocardiogram with aortic root dimensions required.';
+  } else if (timing === 'holosystolic') {
+    condition = 'Mitral Regurgitation'; murmurGrade = 'Grade 3/6'; urgency = 'Urgent';
+    referral = 'Holosystolic blowing murmur detected. Schedule urgent TTE for regurgitant volume quantification.';
+  } else if (timing === 'physiological') {
+    condition = 'Normal S1/S2'; murmurGrade = 'Grade 0/6'; urgency = 'Routine';
+    referral = 'Normal physiological lub-dub detected. Routine monitoring recommended.';
+  } else if (peakFrequency > 100 && peakFrequency < 260) {
+    condition = 'Aortic Stenosis'; murmurGrade = 'Grade 4/6'; urgency = 'Emergency / Critical';
+    referral = 'Harsh crescendo-decrescendo ejection murmur. Urgent Heart Valve Team referral for TAVI/surgical AVR evaluation.';
+  } else if (spectralCentroid > 200 && spectralCentroid < 450) {
+    condition = 'Mitral Regurgitation'; murmurGrade = 'Grade 3/6'; urgency = 'Urgent';
+    referral = 'Holosystolic blowing murmur detected. Schedule urgent TTE for regurgitant volume quantification.';
   } else {
     condition = 'Normal S1/S2'; murmurGrade = 'Grade 0/6'; urgency = 'Routine';
     referral = 'Normal physiological lub-dub detected. Routine monitoring recommended.';
